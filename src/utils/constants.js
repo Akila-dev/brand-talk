@@ -179,6 +179,7 @@ export const SERVICES = [
 			"Campaign management",
 			"• Analytics and performance tracking",
 		],
+		speed: 0.5,
 	},
 	{
 		title: "PUBLIC RELATIONS",
@@ -191,6 +192,7 @@ export const SERVICES = [
 			"Brand launches",
 			"Media events and press trips",
 		],
+		speed: 0.5,
 	},
 	{
 		title: "MARKETING",
@@ -203,6 +205,7 @@ export const SERVICES = [
 			"Email marketing",
 			"Strategic partnerships",
 		],
+		speed: 0.5,
 	},
 	{
 		title: "influencer marketing",
@@ -212,6 +215,7 @@ export const SERVICES = [
 			"Influencer research and outreach",
 			"Influencer brand trips",
 		],
+		speed: 0.5,
 	},
 	{
 		title: "CONTENT CREATION",
@@ -222,6 +226,7 @@ export const SERVICES = [
 			"Event graphics",
 			"Photo shoot planning and execution",
 		],
+		speed: 0.5,
 	},
 	{
 		title: "DIGITAL ADVERTISING",
@@ -234,5 +239,6 @@ export const SERVICES = [
 			"Performance analysis and conversation tracking",
 			"Monitoring and optimization",
 		],
+		speed: 0.5,
 	},
 ];

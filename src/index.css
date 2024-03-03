@@ -237,20 +237,20 @@ p{
   @apply w-full border-t border-black-100
 }
 
-.service-titles .service-title{
+.service-title, .service-titles .service-title{
   @apply cursor-default border-b border-black-100 relative z-[2]
 }
 
 .service-titles .service-title .service-wrapper{
-  @apply inline-block
+  @apply inline-block relative
 }
 
 .service-titles .service-title .service-wrapper p{
-  @apply inline-block text-primary uppercase font-bold text-2xl lg:text-4xl leading-[90%] m-0 relative z-[2] py-5
+  @apply inline-block uppercase text-blue-500 font-bold text-2xl lg:text-4xl leading-[90%] m-0 relative z-[2] py-5
 }
 
-.service-titles .service-title .service-wrapper p:nth-of-type(2){
-  @apply block absolute text-primary top-0 z-[1]
+.service-titles .service-title .service-wrapper .service-clipped{
+  @apply block absolute w-full h-full left-0 !text-red-500 top-0 z-[3]
 }
 
 
