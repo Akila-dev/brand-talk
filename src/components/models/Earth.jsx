@@ -15,11 +15,11 @@ export default function Earth() {
 	});
 
 	const [color, normal, aoMap] = useLoader(TextureLoader, [
-		"/src/assets/models/earth/color.png",
+		"../../assets/models/earth/color.png",
 
-		"/src/assets/models/earth/normal.png",
+		"../../assets/models/earth/normal.png",
 
-		"/src/assets/models/earth/occlusion.png",
+		"../../assets/models/earth/occlusion.png",
 	]);
 
 	return (
