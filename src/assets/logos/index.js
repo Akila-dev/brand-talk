@@ -1,0 +1,12 @@
+export { default as logo1 } from "./1.png";
+export { default as logo2 } from "./2.png";
+export { default as logo3 } from "./3.png";
+export { default as logo4 } from "./4.png";
+export { default as logo5 } from "./5.png";
+export { default as logo6 } from "./6.png";
+export { default as logo7 } from "./7.png";
+export { default as logo8 } from "./8.png";
+export { default as logo9 } from "./9.png";
+export { default as logo10 } from "./10.png";
+export { default as logo11 } from "./11.png";
+export { default as logo12 } from "./12.png";
