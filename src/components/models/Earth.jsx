@@ -6,20 +6,18 @@ import { motion } from "framer-motion-3d";
 
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 
-export default function Earth() {
+export default function Earth({ container }) {
 	const scene = useRef();
 
 	const { scrollYProgress } = useScroll({
-		target: scene,
+		target: container,
 		offset: ["start end", "end start"],
 	});
 
 	const [color, normal, aoMap] = useLoader(TextureLoader, [
-		"../../assets/models/earth/color.png",
-
-		"../../assets/models/earth/normal.png",
-
-		"../../assets/models/earth/occlusion.png",
+		"/models/earth/color.png",
+		"/models/earth/normal.png",
+		"/models/earth/occlusion.png",
 	]);
 
 	return (

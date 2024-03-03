@@ -7,13 +7,24 @@ import SmoothScroll from "../hoc/SmoothScroll";
 import { SERVICES } from "../utils/constants";
 import Earth from "./models/Earth";
 
-const Services = ({ ref }) => {
+const Services = () => {
 	const [selectedProject, setSelectedProject] = useState(null);
 	return (
-		<div className="sticky top-0 h-screen w-full flex items-center justify-center">
+		<div className="container section-py ">
 			<SmoothScroll>
 				<main className="service-main">
-					<Earth container={ref} />
+					<Earth />
+					{/* <div className="service-container">
+						<ServiceTitle
+							data={SERVICES}
+							setSelectedProject={setSelectedProject}
+						/>
+
+						<ServiceDescription
+							data={SERVICES}
+							selectedProject={selectedProject}
+						/>
+					</div> */}
 				</main>
 			</SmoothScroll>
 		</div>

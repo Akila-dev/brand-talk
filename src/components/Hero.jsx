@@ -9,7 +9,7 @@ const Hero2 = () => {
 };
 
 const Hero = () => {
-	return <div className="h-[100vh] w-full bg-gray-50"></div>;
+	return <div className="h-[100vh] w-full bg-gray-100"></div>;
 };
 
 export default Hero;

@@ -224,7 +224,7 @@ p{
 
 /* SERVICES */
 .service-main{
-  @apply h-[100vw] md:h-[500px] w-full relative flex items-center justify-center
+  @apply h-[100vw] md:h-[100vh] max-h-[500px] w-full relative flex items-center justify-center
 }
 
 .service-main img{
@@ -234,11 +234,11 @@ p{
   @apply absolute z-[1] w-full
 }
 .service-titles{
-  @apply w-full border-t border-black-100
+  @apply w-full border-t border-white
 }
 
 .service-title, .service-titles .service-title{
-  @apply cursor-default border-b border-black-100 relative z-[2]
+  @apply cursor-default border-b border-white relative z-[2]
 }
 
 .service-titles .service-title .service-wrapper{
@@ -246,13 +246,16 @@ p{
 }
 
 .service-titles .service-title .service-wrapper p{
-  @apply inline-block uppercase text-blue-500 font-bold text-2xl lg:text-4xl leading-[90%] m-0 relative z-[2] py-5
+  @apply inline-block uppercase text-white font-bold text-3xl md:text-6xl leading-[90%] m-0 relative z-[2] py-1
 }
 
 .service-titles .service-title .service-wrapper .service-clipped{
-  @apply block absolute w-full h-full left-0 !text-red-500 top-0 z-[3]
+  @apply block absolute w-full h-full left-0 !text-brand-100 top-0 z-[3]
 }
 
+.text-shadow{
+  text-shadow:0px 0px 1px #429A7D88
+}
 
 /* SWIPER */
 ::-webkit-scrollbar {

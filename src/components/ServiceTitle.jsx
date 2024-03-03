@@ -31,7 +31,7 @@ function Title({ data, selectedService }) {
 	const { scrollYProgress } = useScroll({
 		target: container,
 
-		offset: ["start end", `${20 / speed}vh end`],
+		offset: ["start end", `${15 / speed}vh end`],
 	});
 
 	const clipProgress = useTransform(scrollYProgress, [0, 1], [100, 0]);
@@ -50,11 +50,16 @@ function Title({ data, selectedService }) {
 					() => selectedService(null);
 				}}
 			>
-				<motion.p className="service-clipped" style={{ clipPath: clip }}>
+				<motion.p
+					className="service-clipped text-shadow"
+					style={{ clipPath: clip }}
+				>
 					{title}
 				</motion.p>
 
-				<p style={{ scale }}>{title}</p>
+				<p className="text-shadow" style={{ scale }}>
+					{title}
+				</p>
 			</div>
 		</motion.div>
 	);
