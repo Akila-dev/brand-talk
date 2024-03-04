@@ -4,29 +4,29 @@
 
 @font-face {
     font-family: MontserratBold;
-    src: url("fonts/Montserrat-Bold.ttf");
+    src: url("fonts/Montserrat-Bold.otf");
 }
 
 @font-face {
     font-family: MontserratRegular;
-    src: url("fonts/Montserrat-Regular.ttf");
+    src: url("fonts/Montserrat-Regular.otf");
 }
 
 @font-face {
     font-family: MontserratMedium;
-    src: url("fonts/Montserrat-Medium.ttf");
+    src: url("fonts/Montserrat-Medium.otf");
 }
 
 @font-face {
     font-family: MontserratLight;
-    src: url("fonts/Montserrat-Light.ttf");
+    src: url("fonts/Montserrat-Light.otf");
 }
 
 *{
     @apply font-medium 
 }
 *{
-  @apply font-medium text-primary 
+  @apply font-medium text-black-100
 }
 
 .hash-span {
@@ -36,7 +36,7 @@
   }
 
 p{
-    @apply text-sm
+    @apply text-sm font-regular
 }
 
 .container{
