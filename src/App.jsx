@@ -59,7 +59,7 @@ function App() {
 	]);
 
 	// SERVICES
-	const [selectedProject, setSelectedProject] = useState(null);
+	const [selectedService, setSelectedService] = useState(null);
 
 	return (
 		<div className="bg-gray-100">
@@ -90,13 +90,13 @@ function App() {
 					<div className="service-container lg:top-[100vh]">
 						<ServiceTitle
 							data={SERVICES}
-							setSelectedProject={setSelectedProject}
+							setSelectedService={setSelectedService}
 						/>
 
-						{/* <ServiceDescription
+						<ServiceDescription
 							data={SERVICES}
-							selectedProject={selectedProject}
-						/> */}
+							selectedService={selectedService}
+						/>
 					</div>
 				</div>
 			</div>

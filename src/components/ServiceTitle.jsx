@@ -7,23 +7,25 @@ import {
 	useMotionTemplate,
 } from "framer-motion";
 
-const ServiceText = ({ data, selectedService }) => {
+const ServiceText = ({ data, setSelectedService }) => {
 	return (
-		<div className="service-titles">
-			{data.map((project, i) => {
-				return (
-					<Title
-						key={i}
-						data={{ ...project, i }}
-						setSelectedProject={selectedService}
-					/>
-				);
-			})}
+		<div className="container">
+			<div className="service-titles">
+				{data.map((service, i) => {
+					return (
+						<Title
+							key={i}
+							data={{ ...service, i }}
+							setSelectedService={setSelectedService}
+						/>
+					);
+				})}
+			</div>
 		</div>
 	);
 };
 
-function Title({ data, selectedService }) {
+function Title({ data, setSelectedService }) {
 	const { title, speed, i } = data;
 
 	const container = useRef(null);
@@ -40,19 +42,15 @@ function Title({ data, selectedService }) {
 	const clip = useMotionTemplate`inset(0 ${clipProgress}% 0 0)`;
 
 	return (
-		<div className="container">
+		<div className="">
 			<motion.div
 				ref={container}
-				className={`service-title w-full overflow-hidden pl-2`}
+				className={`service-title overflow-hidden pl-2`}
 			>
 				<div
-					className={`service-wrapper`}
-					onMouseOver={() => {
-						() => selectedService(i);
-					}}
-					onMouseLeave={() => {
-						() => selectedService(null);
-					}}
+					className={`service-wrapper w-full`}
+					onMouseOver={() => setSelectedService(i)}
+					onMouseLeave={() => setSelectedService(null)}
 				>
 					<motion.p
 						className="service-clipped text-shadow w-full"

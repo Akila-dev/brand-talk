@@ -234,11 +234,11 @@ p{
   @apply lg:absolute z-[1] w-full overflow-hidden
 }
 .service-titles{
-  @apply w-full border-t border-white
+  @apply w-full border-t border-white 
 }
 
 .service-title, .service-titles .service-title{
-  @apply cursor-default border-b border-white relative z-[2]
+  @apply cursor-default border-b border-white relative z-[2] h-[60px]
 }
 
 .service-titles .service-title .service-wrapper{
@@ -246,12 +246,39 @@ p{
 }
 
 .service-titles .service-title .service-wrapper p{
-  @apply inline-block uppercase text-white font-bold text-3xl md:text-6xl leading-[90%] m-0 relative z-[2] py-1
+  @apply inline-block uppercase text-white font-bold text-3xl md:text-6xl leading-[90%] m-0 relative z-[2] overflow-hidden
 }
 
 .service-titles .service-title .service-wrapper .service-clipped{
   @apply block absolute w-full h-full left-0 !text-brand-100 top-0 z-[3]
 }
+
+.service-descriptions{
+  @apply absolute top-[1px] h-full w-full z-[2] pointer-events-none
+}
+
+.service-descriptions .service-description{
+  @apply bg-brand w-full h-[60px] gap-16 grid grid-cols-2
+}
+.service-descriptions .service-description{
+  clip-path: inset(50% 0 50%);
+  transition: clip-path .4s;
+}
+
+.service-descriptions .service-description p{
+  @apply inline-block uppercase text-white font-bold text-3xl md:text-6xl leading-[90%] m-0 relative z-[2] text-nowrap overflow-hidden
+}
+
+.service-descriptions .service-description ul{
+  @apply font-bold flex flex-wrap gap-3 h-auto text-base leading-snug
+}
+.service-descriptions .service-description ul li{
+  @apply list-disc list-inside
+}
+
+
+
+
 
 .text-shadow{
   text-shadow:0px 0px 1px #429A7D88
