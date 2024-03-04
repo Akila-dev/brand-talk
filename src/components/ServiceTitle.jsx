@@ -9,8 +9,8 @@ import {
 
 const ServiceText = ({ data, setSelectedService }) => {
 	return (
-		<div className="container">
-			<div className="service-titles">
+		<div className="containe">
+			<div className="service-titles container">
 				{data.map((service, i) => {
 					return (
 						<Title
@@ -47,10 +47,11 @@ function Title({ data, setSelectedService }) {
 				ref={container}
 				className={`service-title overflow-hidden pl-2`}
 			>
-				<div
+				<button
 					className={`service-wrapper w-full`}
 					onMouseOver={() => setSelectedService(i)}
 					onMouseLeave={() => setSelectedService(null)}
+					// onClick={() => setSelectedService(i)}
 				>
 					<motion.p
 						className="service-clipped text-shadow w-full"
@@ -62,7 +63,7 @@ function Title({ data, setSelectedService }) {
 					<p className="text-shadow w-full" style={{ scale }}>
 						{title}
 					</p>
-				</div>
+				</button>
 			</motion.div>
 		</div>
 	);

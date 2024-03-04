@@ -7,6 +7,7 @@ import {
 	Clients,
 	OurWorks,
 	Footer,
+	PreviousWorksDetails,
 } from "./components";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -62,9 +63,9 @@ function App() {
 	const [selectedService, setSelectedService] = useState(null);
 
 	return (
-		<div className="bg-gray-100">
+		<div className="bg-gray-100 scroll-smooth">
 			<div className="fixed top-0 left-0 h-[70px] md:h-[80px] w-full z-[1000000000000]">
-				<Navbar activeProp={activeNav} />
+				<Navbar activeProp={activeNav} setActiveProp={() => setActiveNav()} />
 			</div>
 			<div>
 				<Hero />
@@ -75,30 +76,35 @@ function App() {
 
 			{/* SERVICES */}
 			<div ref={section2Ref}>
-				<div className="section-pt h-[230w] lg:h-[190vh] relative top-0">
-					<motion.div
-						variants={textVariant()}
-						className="flex flex-col items-center text-center w-full overflow-hidden container"
-					>
-						<p className="section-subtext">What we do</p>
-						<motion.h1 className="section-header">Services</motion.h1>
-					</motion.div>
+				<SmoothScroll>
+					<div className="section-pt lg:h-[173vh relative top-0">
+						<motion.div
+							variants={textVariant()}
+							className="flex flex-col items-center text-center w-full overflow-hidden container"
+						>
+							<p className="section-subtext">What we do</p>
+							<motion.h1 className="section-header">Services</motion.h1>
+						</motion.div>
 
-					<div className="container h-[230w] lg:h-screen w-full top-0 left-0 lg:sticky overflow-hidden">
-						<Services container={section2Ref} />
-					</div>
-					<div className="service-container lg:top-[100vh]">
-						<ServiceTitle
-							data={SERVICES}
-							setSelectedService={setSelectedService}
-						/>
+						<div className="container lg:h-screen w-full top-0 left-0 lg:sticky overflow-hidden">
+							<Services container={section2Ref} />
+						</div>
 
-						<ServiceDescription
-							data={SERVICES}
-							selectedService={selectedService}
-						/>
+						<div className="lg:h-screen w-full top-0 left-0 lg:stiky overflow-hidden flex items-center">
+							<div className="service-container">
+								<ServiceTitle
+									data={SERVICES}
+									setSelectedService={setSelectedService}
+								/>
+
+								<ServiceDescription
+									data={SERVICES}
+									selectedService={selectedService}
+								/>
+							</div>
+						</div>
 					</div>
-				</div>
+				</SmoothScroll>
 			</div>
 			{/* <div className="relative h-[400vh] p-0" ref={section3Ref}>
 				<div className="sticky top-0 w-full h-[100vh]">
@@ -108,6 +114,11 @@ function App() {
 			<div ref={section4Ref}>
 				<OurWorks />
 			</div>
+
+			<div>
+				<PreviousWorksDetails />
+			</div>
+
 			{/* <div ref={section5Ref}>Partners</div> */}
 			<div ref={section6Ref}>
 				<Footer />

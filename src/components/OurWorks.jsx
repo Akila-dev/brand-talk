@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "../hoc/SectionWrapper";
+import { PreviousWorksDetails } from "../components";
 import { PORTFOLIO } from "../utils/constants";
 import { textVariant } from "../utils/motion";
 
@@ -19,7 +20,7 @@ const OurWorks = () => {
 	const swiperSlide = useSwiperSlide();
 	return (
 		<div>
-			<div className="section-p py-5 container">
+			<div className="py-5 container">
 				<motion.div
 					variants={textVariant()}
 					className=" flex flex-col items-center text-center w-full"
@@ -27,12 +28,6 @@ const OurWorks = () => {
 					<p className="section-subtext">portfolio</p>
 					<motion.h1 className="section-header">Our Works</motion.h1>
 				</motion.div>
-
-				{/* <motion.div className="mt-5 flex items-center justify-center">
-					<div className="bg-primary p-3 rounded-[2rem] text-white w-full max-w-[300px]">
-						<h2 className="text-white w-full text-center">Hello</h2>
-					</div>
-				</motion.div> */}
 
 				<div className="relative">
 					<motion.div className="bg-primary w-[250px] sm:w-[300px] h-[45px] md:h-[50px] rounded-[2rem] absolute top-7 left-[50%] translate-x-[-50%]"></motion.div>
@@ -61,7 +56,7 @@ const OurWorks = () => {
 						{PORTFOLIO.map((data, index) => (
 							<SwiperSlide key={index}>
 								{({ isActive }) => (
-									<div>
+									<a href={"#portfolio" + index}>
 										<motion.div className="mb-10 flex items-center justify-center">
 											<div
 												className={` ${
@@ -81,7 +76,7 @@ const OurWorks = () => {
 											alt="slide_image"
 											className="shadow-card"
 										/>
-									</div>
+									</a>
 								)}
 							</SwiperSlide>
 						))}

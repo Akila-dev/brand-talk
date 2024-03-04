@@ -19,8 +19,8 @@ const ServiceDescription = ({ data, selectedService }) => {
 								selectedService === i ? "inset(0 0 0)" : "inset(50% 0 50%)",
 						}}
 					>
-						{/* <p>{crop(title, 9)}</p> */}
-						<p>{title}</p>
+						<p>{crop(title, 9)}...</p>
+						{/* <p>{title}</p> */}
 
 						<ul>
 							{list.map((item, index) => (
