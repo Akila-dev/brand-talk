@@ -231,7 +231,7 @@ p{
   @apply h-full
 }
 .service-container{
-  @apply absolute z-[1] w-full overflow-hidden
+  @apply lg:absolute z-[1] w-full overflow-hidden
 }
 .service-titles{
   @apply w-full border-t border-white
