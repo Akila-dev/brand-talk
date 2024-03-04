@@ -40,28 +40,33 @@ function Title({ data, selectedService }) {
 	const clip = useMotionTemplate`inset(0 ${clipProgress}% 0 0)`;
 
 	return (
-		<motion.div ref={container} className={`service-title`}>
-			<div
-				className={`service-wrapper`}
-				onMouseOver={() => {
-					() => selectedService(i);
-				}}
-				onMouseLeave={() => {
-					() => selectedService(null);
-				}}
+		<div className="container">
+			<motion.div
+				ref={container}
+				className={`service-title w-full overflow-hidden pl-2`}
 			>
-				<motion.p
-					className="service-clipped text-shadow"
-					style={{ clipPath: clip }}
+				<div
+					className={`service-wrapper`}
+					onMouseOver={() => {
+						() => selectedService(i);
+					}}
+					onMouseLeave={() => {
+						() => selectedService(null);
+					}}
 				>
-					{title}
-				</motion.p>
+					<motion.p
+						className="service-clipped text-shadow w-full"
+						style={{ clipPath: clip }}
+					>
+						{title}
+					</motion.p>
 
-				<p className="text-shadow" style={{ scale }}>
-					{title}
-				</p>
-			</div>
-		</motion.div>
+					<p className="text-shadow w-full" style={{ scale }}>
+						{title}
+					</p>
+				</div>
+			</motion.div>
+		</div>
 	);
 }
 

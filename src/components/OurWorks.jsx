@@ -70,7 +70,7 @@ const OurWorks = () => {
 														: "text-primary"
 												}  p-3 text-xs lg:text-sm w-full max-w-[350px]`}
 											>
-												<h2 className="w-full text-gray-50 text-center">
+												<h2 className="w-full text-gray-100 text-center">
 													{data.company}
 												</h2>
 											</div>

@@ -75,11 +75,19 @@ function App() {
 
 			{/* SERVICES */}
 			<div ref={section2Ref}>
-				<div className="container section-py h-[200vh] relative top-0">
-					<div className="h-screen w-full top-0 left-0 sticky">
-						<Services ref={section2Ref} />
+				<div className=" section-py h-[215vh] lg:h-[190vh] relative top-0">
+					<motion.div
+						variants={textVariant()}
+						className="flex flex-col items-center text-center w-full overflow-hidden container"
+					>
+						<p className="section-subtext">What we do</p>
+						<motion.h1 className="section-header">Services</motion.h1>
+					</motion.div>
+
+					<div className="container h-screen w-full top-0 left-0 sticky overflow-hidden">
+						<Services container={section2Ref} />
 					</div>
-					<div className="service-container">
+					<div className="service-container top-[525px] md:top-[700px] lg:top-[100vh]">
 						<ServiceTitle
 							data={SERVICES}
 							setSelectedProject={setSelectedProject}
