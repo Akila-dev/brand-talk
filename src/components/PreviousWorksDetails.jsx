@@ -42,7 +42,7 @@ const WorkDetail = ({
 					<h1 className="section-subhead">{company}</h1>
 					<motion.p
 						variants={fadeIn("", "", 0.1, 1)}
-						className="mt-4 text-sm md:text-[15.5px] max-w-3xl leading-[27px] text-justify"
+						className="mt-4 md:text-[15.5px] max-w-3xl leading-[27px] text-justify"
 					>
 						{content}
 					</motion.p>
