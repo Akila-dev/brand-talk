@@ -4,22 +4,22 @@
 
 @font-face {
     font-family: MontserratBold;
-    src: url("fonts/Montserrat-Bold.otf");
+    src: url("fonts/Montserrat-Bold.otf") format('OpenType');
 }
 
 @font-face {
     font-family: MontserratRegular;
-    src: url("fonts/Montserrat-Regular.otf");
+    src: url("fonts/Montserrat-Regular.otf") format('OpenType');
 }
 
 @font-face {
     font-family: MontserratMedium;
-    src: url("fonts/Montserrat-Medium.otf");
+    src: url("fonts/Montserrat-Medium.otf") format('OpenType');
 }
 
 @font-face {
     font-family: MontserratLight;
-    src: url("fonts/Montserrat-Light.otf");
+    src: url("fonts/Montserrat-Light.otf") format('OpenType');
 }
 
 *{

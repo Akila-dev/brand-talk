@@ -18,6 +18,8 @@ import ServiceDescription from "./components//ServiceDescription";
 import SmoothScroll from "./hoc/SmoothScroll";
 import { SERVICES } from "./utils/constants";
 
+import Lenis from "@studio-freight/lenis";
+
 function App() {
 	const [section1Ref, section1InView] = useInView({ threshold: 0.1 });
 	const [section2Ref, section2InView] = useInView({ threshold: 0.1 });
@@ -29,6 +31,16 @@ function App() {
 	const [activeNav, setActiveNav] = useState(9);
 
 	const logoContainerRef = useRef(null);
+
+	useEffect(() => {
+		const lenis = new Lenis();
+		function raf(time) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+
+		requestAnimationFrame(raf);
+	}, []);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -113,10 +125,9 @@ function App() {
 			</div> */}
 			<div ref={section4Ref}>
 				<OurWorks />
-			</div>
-
-			<div>
-				<PreviousWorksDetails />
+				<div>
+					<PreviousWorksDetails />
+				</div>
 			</div>
 
 			{/* <div ref={section5Ref}>Partners</div> */}

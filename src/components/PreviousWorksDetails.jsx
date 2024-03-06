@@ -46,6 +46,17 @@ const WorkDetail = ({
 					>
 						{content}
 					</motion.p>
+					{subheading && <h3 className="pt-3 font-bold">{subheading}</h3>}
+					{results && (
+						<ul className="flex flex-col gap-1 pt-3">
+							{results.map(({ title, value }, index) => (
+								<li>
+									<b className="font-medium">{title}:</b>{" "}
+									<span className="font-light">{value}</span>
+								</li>
+							))}
+						</ul>
+					)}
 				</motion.div>
 			</motion.div>
 		</div>

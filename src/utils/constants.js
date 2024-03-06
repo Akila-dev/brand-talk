@@ -62,7 +62,7 @@ export const PORTFOLIO = [
 		subheading: "RESULTS",
 		results: [
 			{
-				title: "Social Media Growth:",
+				title: "Social Media Growth",
 				value: "60k+",
 			},
 			{
@@ -121,7 +121,7 @@ export const PORTFOLIO = [
 		subheading: "RESULTS",
 		results: [
 			{
-				title: "Social Media Growth:",
+				title: "Social Media Growth",
 				value: "60k+",
 			},
 			{
@@ -153,7 +153,7 @@ export const PORTFOLIO = [
 		subheading: "RESULTS",
 		results: [
 			{
-				title: "Social Media Growth:",
+				title: "Social Media Growth",
 				value: "60k+",
 			},
 			{
