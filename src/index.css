@@ -25,8 +25,8 @@
 *{
     @apply font-medium 
 }
-*{
-  @apply font-medium text-black-100
+p {
+  @apply font-regular text-black-100
 }
 
 .hash-span {
