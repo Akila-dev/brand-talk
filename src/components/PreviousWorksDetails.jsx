@@ -50,7 +50,7 @@ const WorkDetail = ({
 					{results && (
 						<ul className="flex flex-col gap-1 pt-3">
 							{results.map(({ title, value }, index) => (
-								<li>
+								<li key={index}>
 									<b className="font-medium">{title}:</b>{" "}
 									<span className="font-light">{value}</span>
 								</li>

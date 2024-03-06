@@ -1,4 +1,33 @@
 import { p11, p12, p13, p21, p22, p23, p24, p31 } from "../assets/portfolio";
+import {
+	logo1,
+	logo2,
+	logo3,
+	logo4,
+	logo5,
+	logo6,
+	logo7,
+	logo8,
+	logo9,
+	logo10,
+	logo11,
+	logo12,
+} from "../assets/logos";
+
+export const LOGOS = [
+	logo1,
+	logo2,
+	logo3,
+	logo4,
+	logo5,
+	logo6,
+	logo7,
+	logo8,
+	logo9,
+	logo10,
+	logo11,
+	logo12,
+];
 
 export const NAVIGATION = [
 	{

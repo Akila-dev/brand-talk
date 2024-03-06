@@ -9,17 +9,17 @@
 
 @font-face {
     font-family: MontserratRegular;
-    src: url("fonts/Montserrat-Regular.otf") format('OpenType');
+    src: url("/fonts/Montserrat-Regular.otf") format('OpenType');
 }
 
 @font-face {
     font-family: MontserratMedium;
-    src: url("fonts/Montserrat-Medium.otf") format('OpenType');
+    src: url("/fonts/Montserrat-Medium.otf") format('OpenType');
 }
 
 @font-face {
     font-family: MontserratLight;
-    src: url("fonts/Montserrat-Light.otf") format('OpenType');
+    src: url("/fonts/Montserrat-Light.otf") format('OpenType');
 }
 
 *{
