@@ -95,7 +95,7 @@ const Navbar = ({ activeProp, setActiveProp }) => {
 						<img src={logo} alt="logo" className="w-full h-full object-cover" />
 					</div>
 				</div>
-				<div className="text-2xl bg-bran p-1 rounded-[1rem] text-white">
+				<div className="text-2xl bg-bran p-1 rounded-[1rem] text-whit">
 					{toggled ? (
 						<CgClose className="text-whit" onClick={() => setToggled(false)} />
 					) : (
