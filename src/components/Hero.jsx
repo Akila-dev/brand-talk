@@ -7,6 +7,8 @@ import rightCover from "../assets/right.png";
 import logoLeft from "../assets/logo-w-l.png";
 import logoRight from "../assets/logo-w-r.png";
 
+import hero from "../assets/hero.jpg";
+
 const getWindowsDimension = () => {
 	const { innerWidth: width, innerHeight: height } = window;
 	return {
@@ -48,7 +50,15 @@ const Hero1 = () => {
 
 	return (
 		<div ref={container} className="relative h-[300vh]">
-			<div className="h-[100vh] w-full bg-red-100 sticky top-0 overflow-hidden">
+			<div className="h-[100vh] w-full bg-gray-100 sticky top-0 overflow-hidden">
+				{/* <div className="w-full h-full">
+					<img
+						src={hero}
+						alt="hero"
+						className="h-full w-full object-cover object-bottom"
+					/>
+				</div> */}
+
 				{/* Cover */}
 				<div className="absolute h-screen top-0 left-0 w-full flex z-[100000000000] gap-[20px] lg:gap-[70px]">
 					<motion.div
