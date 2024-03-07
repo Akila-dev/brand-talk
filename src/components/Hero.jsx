@@ -50,7 +50,7 @@ const Hero1 = () => {
 		<div ref={container} className="relative h-[300vh]">
 			<div className="h-[100vh] w-full bg-red-100 sticky top-0 overflow-hidden">
 				{/* Cover */}
-				<div className="absolute h-screen top-0 left-0 w-full flex z-[100000000000] gap-[70px]">
+				<div className="absolute h-screen top-0 left-0 w-full flex z-[100000000000] gap-[20px] lg:gap-[70px]">
 					<motion.div
 						style={{ translateX: translateLeft, scale: scaleLR }}
 						className="h-full w-full flex-1 relative"
@@ -58,13 +58,13 @@ const Hero1 = () => {
 						<img
 							src={leftCover}
 							alt="hero cover"
-							className="h-full w-full object-cover"
+							className="h-full w-full object-cover object-right"
 						/>
-						<div className="absolute right-[70px] top-[50%] translate-y-[-50%] h-[125px]">
+						<div className="absolute right-8 md:right-[70px] top-[50%] translate-y-[-50%] h-[15vw] md:h-[12vw] lg:h-[125px]">
 							<img
 								src={logoLeft}
 								alt="hero cover logo"
-								className="object-cover h-full"
+								className="object-contain h-full"
 							/>
 						</div>
 					</motion.div>
@@ -75,13 +75,13 @@ const Hero1 = () => {
 						<img
 							src={rightCover}
 							alt="hero cover"
-							className="h-full w-full object-cover"
+							className="h-full w-full object-cover object-left"
 						/>
-						<div className="absolute left-[70px] top-[50%] translate-y-[-50%] h-[125px]">
+						<div className="absolute left-10 md:left-[70px] top-[50%] translate-y-[-50%] h-[15vw] md:h-[12vw] lg:h-[125px]">
 							<img
 								src={logoRight}
 								alt="hero cover logo"
-								className="object-cover h-full"
+								className="object-contain h-full"
 							/>
 						</div>
 					</motion.div>
