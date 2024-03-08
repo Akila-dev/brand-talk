@@ -4,6 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import leftCover from "../assets/left.png";
 import rightCover from "../assets/right.png";
 
+import logo from "../assets/brandtalk-white.png";
+
 import logoLeft from "../assets/logo-w-l.png";
 import logoRight from "../assets/logo-w-r.png";
 
@@ -63,6 +65,8 @@ const Hero1 = () => {
 
 	const scaleLR = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
 	const scaleParallax = useTransform(scrollYProgress, [0, 0.8], [1, 1.25]);
+	const scaleText = useTransform(scrollYProgress, [0, 0.8], [0.5, 1]);
+	const textOpacity = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
 
 	return (
 		<div ref={container} className="relative h-[300vh]">
@@ -96,6 +100,7 @@ const Hero1 = () => {
 							className="h-full w-full object-cover object-bottom"
 						/>
 					</motion.div>
+
 					<motion.div
 						style={{ scale: scaleParallax }}
 						className="absolute bottom-0 w-full h-full"
@@ -106,10 +111,30 @@ const Hero1 = () => {
 							className="h-full w-full object-cover object-bottom"
 						/>
 					</motion.div>
+					<motion.div
+						style={{ scale: scaleText, opacity: textOpacity }}
+						className="absolute bottom-0 w-full h-full flex items-center justify-center"
+					>
+						<div className="container text-center flex flex-col items-center gap-5">
+							{/* <p className="section-subtext drop-shadow-xl">brandtalk media</p> */}
+							{/* <div className="h-[30px]">
+								<img src={logo} alt="logo" className="object-cover h-full" />
+							</div> */}
+							<h1 className="text-[10vw] md:text-[8vw] leading-[115%] lg:text-6xl font-bold max-w-[900px] mx-auto text-center text-white uppercase drop-shadow-2xl px-3">
+								Cultivating the art of story telling to build brands
+							</h1>
+							<a
+								href="#about"
+								className="bg-brand text-white rounded-[2rem] px-7 py-2 shadow-card"
+							>
+								Learn More
+							</a>
+						</div>
+					</motion.div>
 				</div>
 
 				{/* Cover */}
-				<div className="absolute h-screen top-0 left-0 w-full flex z-[100000000000] gap-[20px] lg:gap-[70px]">
+				<div className="absolute h-screen top-0 left-0 w-full flex z-[100000000000] gap-[20px] lg:gap-[70px] pointer-events-none">
 					<motion.div
 						style={{ translateX: translateLeft, scale: scaleLR }}
 						className="h-full w-full flex-1 relative"
