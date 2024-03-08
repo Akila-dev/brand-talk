@@ -8,6 +8,10 @@ import logoLeft from "../assets/logo-w-l.png";
 import logoRight from "../assets/logo-w-r.png";
 
 import hero from "../assets/hero.jpg";
+import sky from "../assets/sky.jpg";
+import mountains from "../assets/parallax-3.png";
+import hills from "../assets/parallax-2.png";
+import road from "../assets/parallax1.png";
 
 const getWindowsDimension = () => {
 	const { innerWidth: width, innerHeight: height } = window;
@@ -46,18 +50,63 @@ const Hero1 = () => {
 		[0, screenSize.width / 1.5]
 	);
 
+	const parallax1 = useTransform(
+		scrollYProgress,
+		[0, 0.8],
+		[0, -screenSize.height / 2]
+	);
+	const parallax2 = useTransform(
+		scrollYProgress,
+		[0.4, 0.8],
+		[0, -screenSize.height / 2]
+	);
+
 	const scaleLR = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
+	const scaleParallax = useTransform(scrollYProgress, [0, 0.8], [1, 1.25]);
 
 	return (
 		<div ref={container} className="relative h-[300vh]">
 			<div className="h-[100vh] w-full bg-gray-100 sticky top-0 overflow-hidden">
-				{/* <div className="w-full h-full">
-					<img
-						src={hero}
-						alt="hero"
-						className="h-full w-full object-cover object-bottom"
-					/>
-				</div> */}
+				<div claassName="relative w-full h-full">
+					<div className="w-full h-full">
+						<img
+							src={sky}
+							alt="hero"
+							className="h-screen w-full object-cover object-bottom"
+						/>
+					</div>
+					{/* parralax */}
+					<motion.div
+						style={{ translateY: parallax2, scale: scaleParallax }}
+						className="absolute top-[50%] w-full h-full"
+					>
+						<img
+							src={mountains}
+							alt="hero"
+							className="h-full w-full object-cover object-bottom"
+						/>
+					</motion.div>
+					<motion.div
+						style={{ translateY: parallax1, scale: scaleParallax }}
+						className="absolute top-[50%] w-full h-full"
+					>
+						<img
+							src={hills}
+							alt="hero"
+							className="h-full w-full object-cover object-bottom"
+						/>
+					</motion.div>
+					<motion.div
+						style={{ scale: scaleParallax }}
+						className="absolute bottom-0 w-full h-full"
+					>
+						<img
+							src={road}
+							alt="hero"
+							className="h-full w-full object-cover object-bottom"
+						/>
+					</motion.div>
+				</div>
 
 				{/* Cover */}
 				<div className="absolute h-screen top-0 left-0 w-full flex z-[100000000000] gap-[20px] lg:gap-[70px]">

@@ -22,6 +22,8 @@ const WorkDetail = ({
 	images,
 	videos,
 	index,
+	list,
+	postContent,
 }) => {
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -97,6 +99,20 @@ const WorkDetail = ({
 						>
 							{content}
 						</motion.p>
+						{list && (
+							<div>
+								<ul className="flex flex-col gap-1 list-disc list-inside py-5">
+									{list.map((content, index) => (
+										<li key={index}>
+											<span className="font-medium">{content}</span>
+										</li>
+									))}
+								</ul>
+								<p className="md:text-[15.5px] max-w-3xl leading-[27px] text-justify">
+									{postContent}
+								</p>
+							</div>
+						)}
 						{subheading && <h3 className="pt-3 font-bold">{subheading}</h3>}
 						{results && (
 							<ul className="flex flex-col gap-1 pt-3">
@@ -119,7 +135,19 @@ const PreviousWorksDetails = () => {
 	return (
 		<div className="flex flex-col gap-5 md:gap-[50px] lg:gap-[70px] py-8 md:py-[50px]">
 			{PORTFOLIO.map(
-				({ company, content, subheading, results, images, videos }, i) => (
+				(
+					{
+						company,
+						content,
+						subheading,
+						results,
+						images,
+						videos,
+						list,
+						postContent,
+					},
+					i
+				) => (
 					<WorkDetail
 						key={i}
 						company={company}
@@ -128,6 +156,8 @@ const PreviousWorksDetails = () => {
 						results={results}
 						images={images}
 						videos={videos}
+						list={list}
+						postContent={postContent}
 						index={i}
 					/>
 				)
