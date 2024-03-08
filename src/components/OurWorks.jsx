@@ -13,7 +13,12 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import {
+	Autoplay,
+	EffectCoverflow,
+	Pagination,
+	Navigation,
+} from "swiper/modules";
 import { p11, p21, p31, p12, p22 } from "../assets/portfolio";
 
 const OurWorks = () => {
@@ -38,6 +43,10 @@ const OurWorks = () => {
 						centeredSlides={true}
 						loop={true}
 						slidesPerView={"auto"}
+						autoplay={{
+							delay: 2500,
+							disableOnInteraction: false,
+						}}
 						coverflowEffect={{
 							rotate: 0,
 							stretch: 0,
@@ -50,7 +59,7 @@ const OurWorks = () => {
 							prevEl: ".swiper-button-prev",
 							clickable: true,
 						}}
-						modules={[EffectCoverflow, Pagination, Navigation]}
+						modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}
 						className="swiper_container"
 					>
 						{PORTFOLIO.map((data, index) => (
