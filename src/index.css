@@ -73,6 +73,9 @@ p{
     @apply font-medium px-3 py-2 text-white bg-brand rounded-[2rem]
 }
 
+.section-header-w{
+  @apply text-white font-bold xs:text-[40px] sm:text-[50px]  text-[30px] md:text-[55px] leading-[120%]
+}
 .section-header{
     @apply text-primary font-bold xs:text-[40px] sm:text-[50px]  text-[30px] md:text-[55px] leading-[120%]
 }
@@ -89,6 +92,9 @@ p{
 
 .section-pt{
   @apply pt-[70px] lg:pt-[80px]
+}
+.section-py-min{
+  @apply py-[30px] lg:py-[50px]
 }
 
 .black-gradient {
@@ -376,6 +382,28 @@ p{
 }
 .swiperThumbnails .swiper-slide img{
   @apply !w-full !h-[65px] md:!h-[100px] !overflow-hidden rounded-lg
+}
+
+.logo-swiper-container {
+  height: 6.5rem;
+  /* padding: 2rem 0; */
+  position: relative;
+}
+
+.logo-swiper-container .swiper-slide {
+  width: 6rem;
+  height: 6rem;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .logo-swiper-container {
+    height: 6rem;
+  }
+  .logo-swiper-container .swiper-slide {
+    width: 5.5rem !important;
+    height: 5.5rem !important;
+  }
 }
 
 .swiper-slide-shadow-left,

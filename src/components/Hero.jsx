@@ -71,7 +71,7 @@ const Hero1 = () => {
 	return (
 		<div ref={container} className="relative h-[300vh]">
 			<div className="h-[100vh] w-full bg-gray-100 sticky top-0 overflow-hidden">
-				<div claassName="relative w-full h-full">
+				<div className="relative w-full h-full">
 					<div className="w-full h-full">
 						<img
 							src={sky}
@@ -125,7 +125,7 @@ const Hero1 = () => {
 							</h1>
 							<a
 								href="#about"
-								className="bg-brand text-white rounded-[2rem] px-7 py-2 shadow-card"
+								className="bg-brand text-white rounded-[2rem] px-7 py-2 shadow-card font-regular text-sm md:text-[15.5px]"
 							>
 								Learn More
 							</a>

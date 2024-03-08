@@ -123,6 +123,9 @@ function App() {
 					<Clients />
 				</div>
 			</div> */}
+			<div className="relative p-0" ref={section3Ref}>
+				<Clients />
+			</div>
 			<div ref={section4Ref}>
 				<OurWorks />
 				<div>
