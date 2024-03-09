@@ -264,7 +264,7 @@ p{
 }
 
 .service-descriptions{
-  @apply absolute top-[0] lg:top-[1px] h-full w-full z-[2] pointer-events-none
+  @apply absolute top-[1px] lg:top-[1px] h-full w-full z-[2] pointer-events-none
 }
 
 .service-descriptions .service-description{

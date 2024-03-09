@@ -6,7 +6,7 @@ const ServiceDescription = ({ data, selectedService }) => {
 	};
 
 	return (
-		<div className={`service-descriptions`}>
+		<div className={`service-descriptions hidden lg:block`}>
 			{data.map((service, i) => {
 				const { title, list } = service;
 
@@ -19,7 +19,7 @@ const ServiceDescription = ({ data, selectedService }) => {
 								selectedService === i ? "inset(0 0 0)" : "inset(50% 0 50%)",
 						}}
 					>
-						<p>{crop(title, 9)}...</p>
+						{/* <p>{crop(title, 9)}...</p> */}
 						{/* <p>{title}</p> */}
 
 						<ul>
