@@ -1,4 +1,14 @@
-import { p11, p12, p13, p21, p22, p23, p24, p31 } from "../assets/portfolio";
+import {
+	p11,
+	p12,
+	p13,
+	p21,
+	p22,
+	p23,
+	p24,
+	p31,
+	videoThumbnail1,
+} from "../assets/portfolio";
 import {
 	logo1,
 	logo2,
@@ -72,7 +82,7 @@ export const PORTFOLIO = [
 		subheading: "",
 		results: [],
 		images: [p11, p12],
-		videos: [p13],
+		videos: [],
 	},
 	{
 		company: "SAINT LUCIA TOURISM AUTHORITY",
@@ -99,7 +109,7 @@ export const PORTFOLIO = [
 			},
 		],
 		images: [p11, p12],
-		videos: [p13],
+		videos: [{ video: p13, type: "video/mp4", thumbnail: videoThumbnail1 }],
 	},
 	{
 		company: "THE WINDSOR ARMS HOTEL",
@@ -154,7 +164,7 @@ export const PORTFOLIO = [
 			},
 		],
 		images: [p11, p12],
-		videos: [p13],
+		videos: [],
 	},
 ];
 

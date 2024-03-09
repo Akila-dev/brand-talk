@@ -4,13 +4,14 @@ import SectionWrapper from "../hoc/SectionWrapper";
 import { textVariant, slideIn, fadeIn } from "../utils/motion";
 import { PORTFOLIO } from "../utils/constants";
 
-import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { IoArrowBackOutline, IoArrowForward } from "react-icons/io5";
 
-import "swiper/css/free-mode";
 import "swiper/css";
-import "swiper/css/thumbs";
+import "swiper/css/free-mode";
 import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
@@ -25,10 +26,10 @@ const WorkDetail = ({
 	list,
 	postContent,
 }) => {
-	const [thumbsSwiper, setThumbsSwiper] = useState(null);
+	const [thumbsSwiper, setThumbsSwiper] = useState();
 
 	return (
-		<div className="container">
+		<div id={`portfolio${index}`} className="container">
 			{/* Hello */}
 			<div
 				className={`gap-5 md:gap-[50px] lg:gap-[70px] overflow-hidde grid grid-cols-1 lg:grid-cols-2`}
@@ -37,11 +38,6 @@ const WorkDetail = ({
 					variants={slideIn("right", "tween", 0.2, 1)}
 					className={`${index % 2 ? "lg:order-1" : "lg:order-2"} col-span-1`}
 				>
-					{/* <img
-					src={images[0]}
-					alt={company}
-					className="w-full h-full object-cover rounded-xl shadow-card"
-				/> */}
 					<Swiper
 						style={{
 							"--swiper-navigation-color": "#fff",
@@ -62,9 +58,16 @@ const WorkDetail = ({
 								/>
 							</SwiperSlide>
 						))}
+						{videos.map((video, key) => (
+							<SwiperSlide>
+								<video width="320" height="240" controls className="">
+									<source src={video.video} type={video.type} />
+								</video>
+							</SwiperSlide>
+						))}
 					</Swiper>
 					<Swiper
-						// onSwiper={setThumbsSwiper}
+						onSwiper={setThumbsSwiper}
 						spaceBetween={10}
 						slidesPerView={4}
 						freeMode={true}
@@ -76,6 +79,15 @@ const WorkDetail = ({
 							<SwiperSlide key={i}>
 								<img
 									src={img}
+									alt={company}
+									className="w-full h-full object-cover rounded-xl shadow-card"
+								/>
+							</SwiperSlide>
+						))}
+						{videos.map((video, i) => (
+							<SwiperSlide key={i}>
+								<img
+									src={video.thumbnail}
 									alt={company}
 									className="w-full h-full object-cover rounded-xl shadow-card"
 								/>

@@ -92,11 +92,11 @@ const OurWorks = () => {
 
 						<div className="slider-controler flex justify-center items-center">
 							<button className="swiper-button-prev slider-arrow shadow-card">
-								<IoArrowBackOutline className="bg-white shadow-card p-[10px] rounded-full" />
+								<IoArrowBackOutline className="bg-white shadow-card p-[10px] rounded-full text-brand" />
 							</button>
 							<div className="swiper-pagination"></div>
 							<button className="swiper-button-next slider-arrow shadow-card">
-								<IoArrowForward className="bg-white shadow-card p-[10px] rounded-full" />
+								<IoArrowForward className="bg-white shadow-card p-[10px] rounded-full text-brand" />
 							</button>
 						</div>
 					</Swiper>
