@@ -12,8 +12,8 @@ import logoRight from "../assets/logo-w-r.png";
 import hero from "../assets/hero.jpg";
 import sky from "../assets/sky.jpg";
 import mountains from "../assets/parallax-3.png";
-import hills from "../assets/parallax-2.png";
-import road from "../assets/parallax1.png";
+import palmtrees from "../assets/parallax-2.png";
+import lady from "../assets/parallax-1.jpg";
 
 const getWindowsDimension = () => {
 	const { innerWidth: width, innerHeight: height } = window;
@@ -55,12 +55,12 @@ const Hero1 = () => {
 	const parallax1 = useTransform(
 		scrollYProgress,
 		[0, 0.8],
-		[0, -screenSize.height / 2]
+		[200, -screenSize.height / 2.5]
 	);
 	const parallax2 = useTransform(
 		scrollYProgress,
 		[0.4, 0.8],
-		[0, -screenSize.height / 2]
+		[50, -screenSize.height / 2]
 	);
 
 	const scaleLR = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
@@ -76,7 +76,7 @@ const Hero1 = () => {
 						<img
 							src={sky}
 							alt="hero"
-							className="h-screen w-full object-cover object-bottom"
+							className="h-screen w-full object-cover object-top"
 						/>
 					</div>
 					{/* parralax */}
@@ -95,31 +95,29 @@ const Hero1 = () => {
 						className="absolute top-[50%] w-full h-full"
 					>
 						<img
-							src={hills}
+							src={palmtrees}
 							alt="hero"
-							className="h-full w-full object-cover object-bottom"
+							className="h-full w-full object-cover object-center"
 						/>
 					</motion.div>
 
 					<motion.div
 						style={{ scale: scaleParallax }}
-						className="absolute bottom-0 w-full h-full"
+						className="absolute bottom-0 w-full h-[25vh] lg:h-[200px]"
 					>
-						<img
-							src={road}
-							alt="hero"
-							className="h-full w-full object-cover object-bottom"
-						/>
+						<div className="h-full w-full">
+							<img
+								src={lady}
+								alt="hero"
+								className="h-full w-full object-cover object-center"
+							/>
+						</div>
 					</motion.div>
-					<motion.div
+					{/* <motion.div
 						style={{ scale: scaleText, opacity: textOpacity }}
 						className="absolute bottom-0 w-full h-full flex items-center justify-center"
 					>
 						<div className="container text-center flex flex-col items-center gap-5">
-							{/* <p className="section-subtext drop-shadow-xl">brandtalk media</p> */}
-							{/* <div className="h-[30px]">
-								<img src={logo} alt="logo" className="object-cover h-full" />
-							</div> */}
 							<h1 className="text-[10vw] md:text-[8vw] leading-[115%] lg:text-6xl font-bold max-w-[900px] mx-auto text-center text-white uppercase drop-shadow-2xl px-3">
 								Cultivating the art of story telling to build brands
 							</h1>
@@ -130,7 +128,7 @@ const Hero1 = () => {
 								Learn More
 							</a>
 						</div>
-					</motion.div>
+					</motion.div> */}
 				</div>
 
 				{/* Cover */}
