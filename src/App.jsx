@@ -79,9 +79,7 @@ function App() {
 			<div className="fixed top-0 left-0 h-[70px] md:h-[80px] w-full z-[1000]">
 				<Navbar activeProp={activeNav} setActiveProp={() => setActiveNav()} />
 			</div>
-			{/* <div className="relative h-[300vh]"> */}
 			<Hero />
-			{/* </div> */}
 			<div ref={section1Ref}>
 				<WhoWeAre />
 			</div>

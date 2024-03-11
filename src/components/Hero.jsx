@@ -69,7 +69,7 @@ const Hero1 = () => {
 	const textOpacity = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
 
 	return (
-		<div ref={container} className="relative h-[300vh]">
+		<div ref={container} className="relative h-[400vh] lg:h-[300vh]">
 			<div className="h-[100vh] w-full bg-gray-100 sticky top-0 overflow-hidden">
 				<div className="relative w-full h-full">
 					<div className="w-full h-full">
@@ -185,7 +185,12 @@ const Hero2 = () => {
 };
 
 const Hero = () => {
-	return <Hero1 />;
+	return (
+		<div>
+			<Hero1 />
+			{/* <Hero2 /> */}
+		</div>
+	);
 };
 
 export default Hero;

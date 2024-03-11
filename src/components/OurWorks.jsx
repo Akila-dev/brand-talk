@@ -39,7 +39,7 @@ const OurWorks = () => {
 
 					<Swiper
 						effect={"coverflow"}
-						grabCursor={true}
+						grabCursor={false}
 						centeredSlides={true}
 						loop={true}
 						slidesPerView={"auto"}

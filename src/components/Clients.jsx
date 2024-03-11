@@ -22,43 +22,26 @@ const Clients = () => {
 
 	return (
 		<div className="container section-py-min">
-			<div className="green-orange-gradient p-[1px] rounded-2xl">
+			<div className="green-orange-gradien p-[1px] rounded-2xl">
 				<div
 					// variants={slideIn("up", "tween", 0.2, 1)}
-					className="w-full container py-10 md:py-[50px] rounded-2xl bg-primary text-white-100 space-y-5 md:space-y-10"
+					className="w-full container py-5 md:py-[25px] rounded-2xl bg- text-white-100 space-y-5 md:space-y-10"
 				>
 					<div className="flex flex-col items-center text-center w-full overflow-hidden container">
 						<p className="section-subtext">our clients</p>
-						<h1 className="section-header-w">Clients</h1>
+						<h1 className="section-header">Clients</h1>
 					</div>
-					{/* <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
-					{LOGOS.map((logo, index) => (
-						<div
-							className="w-[6rem] h-[6rem] md:w-[6.5rem] md:h-[6.5rem]"
-							key={index}
-						>
-							<BallCanvas icon={logo} />
-						</div>
-					))}
-				</div> */}
 
 					<Swiper
-						effect={"coverflow"}
-						grabCursor={true}
-						centeredSlides={true}
+						grabCursor={false}
+						centeredSlides={false}
 						loop={true}
 						slidesPerView={"auto"}
 						autoplay={{
 							delay: 2500,
 							disableOnInteraction: false,
 						}}
-						pagination={{ el: ".swiper-pagination", clickable: true }}
-						// navigation={{
-						// 	nextEl: ".swiper-button-next",
-						// 	prevEl: ".swiper-button-prev",
-						// 	clickable: true,
-						// }}
-						modules={[Autoplay, Pagination, Navigation]}
+						modules={[Autoplay]}
 						className="logo-swiper-container"
 					>
 						{LOGOS.map((logo, index) => (
