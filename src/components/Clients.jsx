@@ -25,7 +25,7 @@ const Clients = () => {
 			<div className="green-orange-gradien p-[1px] rounded-2xl">
 				<div
 					// variants={slideIn("up", "tween", 0.2, 1)}
-					className="w-full container py-5 md:py-[25px] rounded-2xl bg- text-white-100 space-y-5 md:space-y-10"
+					className="w-full containe py-5 md:py-[25px] rounded-2xl bg- text-white-100 space-y-5 md:space-y-10"
 				>
 					<div className="flex flex-col items-center text-center w-full overflow-hidden container">
 						<p className="section-subtext">our clients</p>
