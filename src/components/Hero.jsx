@@ -272,7 +272,7 @@ const Hero1 = () => {
 						style={{
 							translateZ: screenSize.width > 740 ? z : zMobile,
 						}}
-						className="absolute bottom-0 w-full h-[55vh] lg:h-[55vh]"
+						className="absolute bottom-0 w-full h-[55vh] lg:h-[55vh] scale-95"
 					>
 						<div className="h-full w-full">
 							<img

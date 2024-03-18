@@ -58,8 +58,8 @@ const WorkDetail = ({
 								/>
 							</SwiperSlide>
 						))}
-						{videos.map((video, key) => (
-							<SwiperSlide>
+						{videos.map((video, i) => (
+							<SwiperSlide key={i}>
 								<video width="320" height="240" controls className="">
 									<source src={video.video} type={video.type} />
 								</video>
