@@ -272,7 +272,7 @@ const Hero1 = () => {
 						style={{
 							translateZ: screenSize.width > 740 ? z : zMobile,
 						}}
-						className="absolute bottom-0 w-full h-[50vh] lg:h-[55vh]"
+						className="absolute bottom-0 w-full h-[55vh] lg:h-[55vh]"
 					>
 						<div className="h-full w-full">
 							<img
@@ -303,6 +303,7 @@ const Hero1 = () => {
 				{/* Cover */}
 				<div className="absolute h-screen top-0 left-0 w-full flex z-[100000000000] gap-[20px] lg:gap-[70px] pointer-events-none">
 					<motion.div
+						layout
 						style={{ translateX: translateLeft, scale: scaleLR }}
 						className="h-full w-full flex-1 relative"
 					>
@@ -320,6 +321,7 @@ const Hero1 = () => {
 						</div>
 					</motion.div>
 					<motion.div
+						layout
 						style={{ translateX: translateRight, scale: scaleLR }}
 						className="h-full w-full flex-1 relative"
 					>
