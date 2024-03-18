@@ -213,7 +213,7 @@ const Hero1 = () => {
 	];
 
 	return (
-		<div ref={container} className="relative h-[400vh] lg:h-[400vh]">
+		<div ref={container} className="relative h-[200vh] lg:h-[400vh]">
 			<div className="h-[100vh] w-full bg-gray-100 sticky top-0 overflow-hidden">
 				<div
 					className="relative w-full h-full"
