@@ -213,7 +213,7 @@ const Hero1 = () => {
 	];
 
 	return (
-		<div ref={container} className="relative h-[200vh] lg:h-[400vh]">
+		<div ref={container} className="relative h-[300vh] lg:h-[300vh]">
 			<div className="h-[100vh] w-full bg-gray-100 sticky top-0 overflow-hidden">
 				<div
 					className="relative w-full h-full"
@@ -227,6 +227,7 @@ const Hero1 = () => {
 						/>
 					</div>
 					<motion.div
+						layout
 						style={{
 							opacity: bgOpacity,
 							translateZ: screenSize.width > 740 ? z : zMobile,
@@ -247,6 +248,7 @@ const Hero1 = () => {
 							i
 						) => (
 							<motion.div
+								layout
 								key={i}
 								style={{
 									translateZ:
@@ -266,6 +268,7 @@ const Hero1 = () => {
 					)}
 
 					<motion.div
+						layout
 						style={{
 							translateZ: screenSize.width > 740 ? z : zMobile,
 						}}
