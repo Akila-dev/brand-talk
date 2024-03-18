@@ -1,5 +1,11 @@
 import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+	motion,
+	useScroll,
+	useTransform,
+	cubicBezier,
+	circOut,
+} from "framer-motion";
 
 import leftCover from "../assets/left.png";
 import rightCover from "../assets/right.png";
@@ -9,11 +15,23 @@ import logo from "../assets/brandtalk-white.png";
 import logoLeft from "../assets/logo-w-l.png";
 import logoRight from "../assets/logo-w-r.png";
 
-import hero from "../assets/hero.jpg";
+// import hero from "../assets/hero.jpg";
 import sky from "../assets/sky.jpg";
-import mountains from "../assets/parallax-3.png";
-import palmtrees from "../assets/parallax-2.png";
-import lady from "../assets/parallax-1.jpg";
+// import mountains from "../assets/parallax-3.png";
+// import palmtrees from "../assets/parallax-2.png";
+// import lady from "../assets/parallax-1.jpg";
+
+import {
+	parallax1,
+	parallax2,
+	parallax3,
+	parallax4,
+	parallax5,
+	parallax6,
+	parallax7,
+	parallaxBg,
+	woman,
+} from "../assets/parallax";
 
 const getWindowsDimension = () => {
 	const { innerWidth: width, innerHeight: height } = window;
@@ -42,36 +60,165 @@ const Hero1 = () => {
 	});
 	const translateLeft = useTransform(
 		scrollYProgress,
-		[0, 1],
-		[0, -screenSize.width / 1.5]
+		[0, 0.8],
+		[0, -screenSize.width / 1.5],
+		{ ease: cubicBezier(0.17, 0.57, 0.83, 0.57) }
+		// { ease: circOut }
 	);
-
 	const translateRight = useTransform(
 		scrollYProgress,
-		[0, 1],
-		[0, screenSize.width / 1.5]
+		[0, 0.8],
+		[0, screenSize.width / 1.5],
+		{ ease: cubicBezier(0.17, 0.57, 0.83, 0.57) }
+		// { ease: circOut }
 	);
 
-	const parallax1 = useTransform(
+	// PARALLAX
+	const parallaxSlideIn1 = useTransform(
 		scrollYProgress,
-		[0, 0.8],
-		[200, -screenSize.height / 2.5]
+		[0, 0.15],
+		[(screenSize.height * 75) / 100, 0],
+		{ ease: circOut }
 	);
-	const parallax2 = useTransform(
+	const parallaxSlideIn2 = useTransform(
 		scrollYProgress,
-		[0.4, 0.8],
-		[50, -screenSize.height / 2]
+		[0, 0.25],
+		[(screenSize.height * 75) / 100, 0],
+		{ ease: circOut }
 	);
+	const parallaxSlideIn3 = useTransform(
+		scrollYProgress,
+		[0, 0.35],
+		[(screenSize.height * 75) / 100, 0],
+		{ ease: circOut }
+	);
+	const parallaxSlideIn4 = useTransform(
+		scrollYProgress,
+		[0, 0.25],
+		[(screenSize.height * 75) / 100, 0],
+		{ ease: circOut }
+	);
+	const parallaxSlideIn5 = useTransform(
+		scrollYProgress,
+		[0, 0.45],
+		[(screenSize.height * 75) / 100, 0],
+		{ ease: circOut }
+	);
+	const parallaxSlideIn6 = useTransform(
+		scrollYProgress,
+		[0, 0.55],
+		[(screenSize.height * 75) / 100, 0],
+		{ ease: circOut }
+	);
+	const parallaxSlideIn7 = useTransform(
+		scrollYProgress,
+		[0, 0.65],
+		[(screenSize.height * 75) / 100, 0],
+		{ ease: circOut }
+	);
+	// const parallaxSlideInBg = useTransform(
+	// 	scrollYProgress,
+	// 	[0, 0.85],
+	// 	[(screenSize.height * 75) / 100, 0]
+	// );
 
 	const scaleLR = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
-	const scaleParallax = useTransform(scrollYProgress, [0, 0.8], [1, 1.25]);
+
 	const scaleText = useTransform(scrollYProgress, [0, 0.8], [0.5, 1]);
 	const textOpacity = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
 
+	// PARALLAX
+	const z = useTransform(scrollYProgress, [0, 0.8], [1, 120]);
+	const zMobile = useTransform(scrollYProgress, [0, 0.8], [1, 150]);
+	const bgOpacity = useTransform(scrollYProgress, [0, 0.65, 0.85], [0, 0, 1]);
+
+	const opacity1 = useTransform(scrollYProgress, [0, 0, 0.15], [0, 0, 1], {
+		ease: circOut,
+	});
+	const opacity2 = useTransform(scrollYProgress, [0, 0.1, 0.25], [0, 0, 1], {
+		ease: circOut,
+	});
+	const opacity3 = useTransform(scrollYProgress, [0, 0.2, 0.35], [0, 0, 1], {
+		ease: circOut,
+	});
+	const opacity4 = useTransform(scrollYProgress, [0, 0.1, 0.25], [0, 0, 1], {
+		ease: circOut,
+	});
+	const opacity5 = useTransform(scrollYProgress, [0, 0.3, 0.45], [0, 0, 1], {
+		ease: circOut,
+	});
+	const opacity6 = useTransform(scrollYProgress, [0, 0.4, 0.55], [0, 0, 1], {
+		ease: circOut,
+	});
+	const opacity7 = useTransform(scrollYProgress, [0, 0.5, 0.65], [0, 0, 1], {
+		ease: circOut,
+	});
+
+	const parallax = [
+		// {
+		// 	img: parallaxBg,
+		// 	translateZ: z,
+		// 	translateZMobile: zMobile,
+		// 	parallaxSlideIn: parallaxSlideInBg,
+		// },
+		{
+			img: parallax7,
+			translateZ: z,
+			translateZMobile: zMobile,
+			parallaxSlideIn: parallaxSlideIn7,
+			opacity: opacity7,
+		},
+		{
+			img: parallax6,
+			translateZ: z,
+			translateZMobile: zMobile,
+			parallaxSlideIn: parallaxSlideIn6,
+			opacity: opacity6,
+		},
+		{
+			img: parallax5,
+			translateZ: z,
+			translateZMobile: zMobile,
+			parallaxSlideIn: parallaxSlideIn5,
+			opacity: opacity5,
+		},
+		{
+			img: parallax4,
+			translateZ: z,
+			translateZMobile: zMobile,
+			parallaxSlideIn: parallaxSlideIn4,
+			opacity: opacity4,
+		},
+		{
+			img: parallax3,
+			translateZ: z,
+			translateZMobile: zMobile,
+			parallaxSlideIn: parallaxSlideIn3,
+			opacity: opacity3,
+		},
+		{
+			img: parallax2,
+			translateZ: z,
+			translateZMobile: zMobile,
+			parallaxSlideIn: parallaxSlideIn2,
+			opacity: opacity2,
+		},
+		{
+			img: parallax1,
+			translateZ: z,
+			translateZMobile: zMobile,
+			parallaxSlideIn: parallaxSlideIn1,
+			opacity: opacity1,
+		},
+	];
+
 	return (
-		<div ref={container} className="relative h-[400vh] lg:h-[300vh]">
+		<div ref={container} className="relative h-[400vh] lg:h-[400vh]">
 			<div className="h-[100vh] w-full bg-gray-100 sticky top-0 overflow-hidden">
-				<div className="relative w-full h-full">
+				<div
+					className="relative w-full h-full"
+					style={{ perspective: "550px", transformStyle: "preserve-3d" }}
+				>
 					<div className="w-full h-full">
 						<img
 							src={sky}
@@ -79,37 +226,56 @@ const Hero1 = () => {
 							className="h-screen w-full object-cover object-top"
 						/>
 					</div>
-					{/* parralax */}
 					<motion.div
-						style={{ translateY: parallax2, scale: scaleParallax }}
-						className="absolute top-[50%] w-full h-full"
-					>
-						<img
-							src={mountains}
-							alt="hero"
-							className="h-full w-full object-cover object-bottom"
-						/>
-					</motion.div>
-					<motion.div
-						style={{ translateY: parallax1, scale: scaleParallax }}
-						className="absolute top-[50%] w-full h-full"
-					>
-						<img
-							src={palmtrees}
-							alt="hero"
-							className="h-full w-full object-cover object-center"
-						/>
-					</motion.div>
-
-					<motion.div
-						style={{ scale: scaleParallax }}
-						className="absolute bottom-0 w-full h-[25vh] lg:h-[200px]"
+						style={{
+							opacity: bgOpacity,
+							translateZ: screenSize.width > 740 ? z : zMobile,
+						}}
+						className="absolute bottom-[25vh] w-full h-[75vh]"
 					>
 						<div className="h-full w-full">
 							<img
-								src={lady}
+								src={parallaxBg}
 								alt="hero"
-								className="h-full w-full object-cover object-center"
+								className="h-full w-full object-cover object-top"
+							/>
+						</div>
+					</motion.div>
+					{parallax.map(
+						(
+							{ img, translateZ, translateZMobile, parallaxSlideIn, opacity },
+							i
+						) => (
+							<motion.div
+								key={i}
+								style={{
+									translateZ:
+										screenSize.width > 740 ? translateZ : translateZMobile,
+									// opacity,
+									translateY: parallaxSlideIn,
+								}}
+								className="absolute bottom-[25vh] w-full h-[75vh]"
+							>
+								<img
+									src={img}
+									alt="hero"
+									className="h-full w-full object-cover object-top"
+								/>
+							</motion.div>
+						)
+					)}
+
+					<motion.div
+						style={{
+							translateZ: screenSize.width > 740 ? z : zMobile,
+						}}
+						className="absolute bottom-0 w-full h-[50vh] lg:h-[55vh]"
+					>
+						<div className="h-full w-full">
+							<img
+								src={woman}
+								alt="hero"
+								className="h-full w-full object-cover object-top"
 							/>
 						</div>
 					</motion.div>
