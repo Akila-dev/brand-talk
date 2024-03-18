@@ -75,7 +75,7 @@ function App() {
 	const [selectedService, setSelectedService] = useState(null);
 
 	return (
-		<div className="bg-gray-100 scroll-smooth">
+		<div className="bg-gray-100">
 			<div className="fixed top-0 left-0 h-[70px] md:h-[80px] w-full z-[1000]">
 				<Navbar activeProp={activeNav} setActiveProp={() => setActiveNav()} />
 			</div>
