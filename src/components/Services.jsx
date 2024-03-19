@@ -10,7 +10,7 @@ import Earth from "./models/Earth";
 const Services = ({ container }) => {
 	const [selectedProject, setSelectedProject] = useState(null);
 	return (
-		<div className="sticky top-0 h-full max-h-[375px] md:max-h-[500px] lg:max-h-screen lg:h-screen w-full flex items-center justify-center">
+		<div className="sticky top-0 h-screen w-full flex items-center justify-center">
 			<SmoothScroll>
 				<main className="service-main">
 					<Earth container={container} />

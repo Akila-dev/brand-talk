@@ -245,7 +245,7 @@ h1{
   @apply h-full
 }
 .service-container{
-  @apply lg:absolute z-[1] w-full overflow-hidden
+  @apply absolute z-[1] w-full overflow-hidden
 }
 .service-titles{
   @apply w-full border-t border-white 
@@ -287,7 +287,7 @@ h1{
   @apply font-bolden flex flex-wrap content-center gap-x-3 h-auto text-base leading-snug md:col-span-2 xl:col-span-1
 }
 .service-descriptions .service-description ul li{
-  @apply list-disc list-inside text-xs lg:text-sm text-white leading-[1.2]
+  @apply list-disc list-inside text-xs lg:text-sm text-white leading-[1.2] font-text
 }
 
 
