@@ -7,3 +7,5 @@ export { default as p23 } from "./stonefield-3.jpg";
 export { default as p24 } from "./stonefield-4.jpg";
 export { default as p31 } from "./windsor-1.jpg";
 export { default as videoThumbnail1 } from "./vidThumb1.png";
+export { default as p41 } from "./toronto-1.png";
+export { default as p51 } from "./mont-1.png";

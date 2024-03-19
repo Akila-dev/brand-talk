@@ -7,6 +7,8 @@ import {
 	p23,
 	p24,
 	p31,
+	p41,
+	p51,
 	videoThumbnail1,
 } from "../assets/portfolio";
 import {
@@ -81,7 +83,7 @@ export const PORTFOLIO = [
 			"Brandtalk Media custom designed two innovative 32” x 32” & 65” x 36” ft spaces with interactive activations including a one of a kind hologram experience. We developed ongoing in-booth stage programming, including panel discussions, fireside chats, keynotes and interactive activities. The event hosted two of the largest activations at the event. BMO ranked top 10% of companies favourited on the Colission app.",
 		subheading: "",
 		results: [],
-		images: [p11, p12],
+		images: [p51],
 		videos: [],
 	},
 	{
@@ -163,7 +165,7 @@ export const PORTFOLIO = [
 				value: "250M+",
 			},
 		],
-		images: [p11, p12],
+		images: [p41],
 		videos: [],
 	},
 ];

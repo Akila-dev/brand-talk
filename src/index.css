@@ -36,6 +36,10 @@ p {
     display: block;
   }
 
+h1{
+  @apply font-bolden
+}
+
 p{
     @apply text-sm font-regular
 }
