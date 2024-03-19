@@ -16,6 +16,16 @@ const Navbar = ({ activeProp, setActiveProp }) => {
 
 	// useEffect(() => {
 	// 	const handleScroll = () => {
+	// 		setActive(activeProp);
+	// 	};
+
+	// 	window.addEventListener("scroll", handleScroll);
+
+	// 	return () => window.removeEventListener("scroll", handleScroll);
+	// }, [activeProp]);
+
+	// useEffect(() => {
+	// 	const handleScroll = () => {
 	// 		const scrollTop = window.scrollY;
 	// 		if (scrollTop > 30) {
 	// 			setScrolled(true);
@@ -59,9 +69,10 @@ const Navbar = ({ activeProp, setActiveProp }) => {
 							}`}
 							href={"#" + url}
 							key={index}
-							onClick={() => setActiveProp(index)}
 						>
-							<a href={"#" + url}>{name}</a>
+							<button onClick={() => setActiveProp(index)}>
+								<a href={"#" + url}>{name}</a>
+							</button>
 						</li>
 					))}
 				</ul>
@@ -79,7 +90,7 @@ const Navbar = ({ activeProp, setActiveProp }) => {
 							}`}
 							href={"#" + url}
 							key={index}
-							onClick={() => setActiveProp(index)}
+							onClick={() => setActiveProp(index + 3)}
 						>
 							<a href={"#" + url}>{name}</a>
 						</li>

@@ -35,10 +35,7 @@ const WorkDetail = ({
 				className={`gap-5 md:gap-[50px] lg:gap-[70px] overflow-hidde grid grid-cols-1 lg:grid-cols-2`}
 			>
 				<motion.div
-					// variants={slideIn("right", "tween", 0.2, 1)}
-					initial={{ x: 200 }}
-					whileInView={{ x: 0 }}
-					transition={{ type: "spring", stiffness: 100 }}
+					variants={slideIn("right", "tween", 0.2, 1)}
 					className={`${index % 2 ? "lg:order-1" : "lg:order-2"} col-span-1`}
 				>
 					<Swiper
@@ -100,10 +97,7 @@ const WorkDetail = ({
 				</motion.div>
 
 				<motion.div
-					// variants={slideIn("top", "tween", 0.2, 1)}
-					initial={{ x: -200 }}
-					whileInView={{ x: 0 }}
-					transition={{ type: "spring", stiffness: 100 }}
+					variants={slideIn("top", "tween", 0.2, 1)}
 					className={`${
 						index % 2 ? "lg:order-2" : "lg:order-1"
 					} col-span-1 flex items-center`}
