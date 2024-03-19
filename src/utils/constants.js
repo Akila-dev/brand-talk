@@ -89,7 +89,7 @@ export const PORTFOLIO = [
 	{
 		company: "SAINT LUCIA TOURISM AUTHORITY",
 		content:
-			"Brandtalk collaborated with the government of Saint Lucia to execute a compelling social media campaign aimed at boosting tourism and raising awareness of the island in key markets including Canada, USA, and the . Leveraging the new tagline #LetHerInspire, we developed a 360 approach, unveiling a collection of 10 niche themed videos, over 200 captivating images, with a sweepstakes to win a 7-night stay in Saint Lucia. The strategic plan included influencer partnerships, and targeted paid advertising. This comprehensive campaign not only garnered significant attention but also earned Saint Lucia their first industry digital award—an achievement reflecting the campaign'simpactful success.",
+			"Brandtalk collaborated with the government of Saint Lucia to execute a compelling social media campaign aimed at boosting tourism and raising awareness of the island in key markets including Canada, USA, and the UK. Leveraging the new tagline #LetHerInspire, we developed a 360 approach, unveiling a collection of 10 niche themed videos, over 200 captivating images, with a sweepstakes to win a 7-night stay in Saint Lucia. The strategic plan included influencer partnerships, and targeted paid advertising. This comprehensive campaign not only garnered significant attention but also earned Saint Lucia their first industry digital award—an achievement reflecting the campaign'simpactful success.",
 		subheading: "RESULTS",
 		results: [
 			{

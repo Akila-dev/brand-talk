@@ -24,7 +24,7 @@ export default {
 			// },
 			fontFamily: {
 				bolden: "MontserratBold",
-				regular: "MontserratRegular",
+				text: "MontserratRegular",
 				medium: "MontserratMedium",
 				light: "MontserratLight",
 			},

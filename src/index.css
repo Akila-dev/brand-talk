@@ -22,11 +22,11 @@
     src: url("/fonts/Montserrat-Light.otf") format('OpenType');
 }
 
-*{
+b{
     @apply font-medium 
 }
 p {
-  @apply font-regular text-black-100 text-sm
+  @apply font-text text-black-100 text-sm
 }
 
 
@@ -41,7 +41,7 @@ h1{
 }
 
 /* p{
-    @apply text-sm font-regular
+    @apply text-sm font-text
 } */
 
 .container{
