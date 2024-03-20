@@ -26,7 +26,7 @@ b{
     @apply font-medium 
 }
 p {
-  @apply font-text text-black-100 text-sm
+  @apply font-regular text-black-100 text-sm
 }
 
 
@@ -37,11 +37,11 @@ p {
   }
 
 h1{
-  @apply font-bolden
+  @apply font-bold
 }
 
 /* p{
-    @apply text-sm font-text
+    @apply text-sm font-regular
 } */
 
 .container{
@@ -78,13 +78,13 @@ h1{
 }
 
 .section-header-w{
-  @apply text-white font-bolden xs:text-[40px] sm:text-[50px]  text-[30px] md:text-[55px] leading-[120%]
+  @apply text-white font-bold xs:text-[40px] sm:text-[50px]  text-[30px] md:text-[55px] leading-[120%]
 }
 .section-header{
-    @apply text-primary font-bolden xs:text-[40px] sm:text-[50px]  text-[30px] md:text-[55px] leading-[120%]
+    @apply text-primary font-bold xs:text-[40px] sm:text-[50px]  text-[30px] md:text-[55px] leading-[120%]
 }
 .section-subhead{
-  @apply text-primary font-bolden xs:text-[40px] sm:text-[50px]  text-[30px] md:text-[45px] leading-[120%]
+  @apply text-primary font-bold xs:text-[40px] sm:text-[50px]  text-[30px] md:text-[45px] leading-[120%]
 }
 .section-subtext{
     @apply sm:text-[18px]  text-[14px] uppercase tracking-wider mb-3 text-brand
@@ -260,7 +260,7 @@ h1{
 }
 
 .service-titles .service-title .service-wrapper p{
-  @apply inline-block uppercase text-white font-bolden text-3xl md:text-6xl leading-[90%] m-0 relative z-[2] overflow-hidden pointer-events-none 
+  @apply inline-block uppercase text-white font-bold text-3xl md:text-6xl leading-[90%] m-0 relative z-[2] overflow-hidden pointer-events-none 
 }
 
 .service-titles .service-title .service-wrapper .service-clipped{
@@ -268,7 +268,7 @@ h1{
 }
 
 .service-descriptions{
-  @apply absolute top-[1px] lg:top-[1px] h-full w-full z-[2] pointer-events-none
+  @apply absolute top-[1px] h-full w-full z-[2] pointer-events-none
 }
 
 .service-descriptions .service-description{
@@ -280,14 +280,14 @@ h1{
 }
 
 .service-descriptions .service-description p{
-  @apply inline-block uppercase text-white font-bolden text-3xl md:text-6xl leading-[90%] m-0 relative z-[2] text-nowrap overflow-hidden col-span-1 text-ellipsis
+  @apply inline-block uppercase text-white font-bold text-3xl md:text-6xl leading-[90%] m-0 relative z-[2] text-nowrap overflow-hidden col-span-1 text-ellipsis
 }
 
 .service-descriptions .service-description ul{
-  @apply font-bolden flex flex-wrap content-center gap-x-3 h-auto text-base leading-snug md:col-span-2 xl:col-span-1
+  @apply font-bold flex flex-wrap content-center gap-x-3 h-auto text-base leading-snug md:col-span-2 xl:col-span-1
 }
 .service-descriptions .service-description ul li{
-  @apply list-disc list-inside text-xs lg:text-sm text-white leading-[1.2] font-text
+  @apply list-disc list-inside text-xs lg:text-sm text-white leading-[1.2] font-regular
 }
 
 
