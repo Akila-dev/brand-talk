@@ -1,0 +1,9 @@
+export { default as parallax1 } from "./1.png";
+export { default as parallax2 } from "./2.png";
+export { default as parallax3 } from "./3.png";
+export { default as parallax4 } from "./4.png";
+export { default as parallax5 } from "./5.png";
+export { default as parallax6 } from "./6.png";
+export { default as parallax7 } from "./7.png";
+export { default as parallaxBg } from "./bg.png";
+export { default as woman } from "./woman.png";

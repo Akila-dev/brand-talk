@@ -282,22 +282,6 @@ const Hero1 = () => {
 							/>
 						</div>
 					</motion.div>
-					{/* <motion.div
-						style={{ scale: scaleText, opacity: textOpacity }}
-						className="absolute bottom-0 w-full h-full flex items-center justify-center"
-					>
-						<div className="container text-center flex flex-col items-center gap-5">
-							<h1 className="text-[10vw] md:text-[8vw] leading-[115%] lg:text-6xl font-bold max-w-[900px] mx-auto text-center text-white uppercase drop-shadow-2xl px-3">
-								Cultivating the art of story telling to build brands
-							</h1>
-							<a
-								href="#about"
-								className="bg-brand text-white rounded-[2rem] px-7 py-2 shadow-card font-regular text-sm md:text-[15.5px]"
-							>
-								Learn More
-							</a>
-						</div>
-					</motion.div> */}
 				</div>
 
 				{/* Cover */}
