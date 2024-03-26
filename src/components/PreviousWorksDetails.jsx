@@ -36,9 +36,9 @@ const WorkDetail = ({
 			>
 				<motion.div
 					// variants={slideIn("right", "tween", 0.2, 1)}
-					initial={{ x: 200 }}
-					whileInView={{ x: 0 }}
-					transition={{ type: "spring", stiffness: 100 }}
+					// initial={{ x: 200 }}
+					// whileInView={{ x: 0 }}
+					// transition={{ type: "spring", stiffness: 100 }}
 					className={`${index % 2 ? "lg:order-1" : "lg:order-2"} col-span-1`}
 				>
 					<Swiper
@@ -101,9 +101,9 @@ const WorkDetail = ({
 
 				<motion.div
 					// variants={slideIn("top", "tween", 0.2, 1)}
-					initial={{ x: -200 }}
-					whileInView={{ x: 0 }}
-					transition={{ type: "spring", stiffness: 100 }}
+					// initial={{ x: -200 }}
+					// whileInView={{ x: 0 }}
+					// transition={{ type: "spring", stiffness: 100 }}
 					className={`${
 						index % 2 ? "lg:order-2" : "lg:order-1"
 					} col-span-1 flex items-center`}
