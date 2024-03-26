@@ -19,7 +19,7 @@ const WhoWeAre = () => {
 		<div
 			ref={container}
 			style={{ perspective: "550px", transformStyle: "preserve-3d" }}
-			className="container flex md:justify-center md:text-center section-pt"
+			className="container flex md:justify-center md:text-center section-py"
 		>
 			<motion.div
 				// variants={slideIn("top", "tween", 0.2, 1)}

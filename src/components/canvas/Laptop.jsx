@@ -169,7 +169,11 @@ const Laptop = ({ container }) => {
 	);
 	const rotateY = useTransform(scrollYProgress, [0, 1], [0, Math.sin(10) / 4]);
 	const rotateZ = useTransform(scrollYProgress, [0, 1], [0, 0.03]);
-	const positionY = useTransform(scrollYProgress, [0, 1], [-0, -5]);
+	const positionY = useTransform(
+		scrollYProgress,
+		[0, 1],
+		[-0, screenSize.width > 700 ? -4.5 : -5]
+	);
 
 	return (
 		<div className="w-full h-screen">
@@ -196,7 +200,7 @@ const Laptop = ({ container }) => {
 					<Environment preset="city" />
 				</Suspense>
 				<ContactShadows
-					position={[0, -6.5, 0]}
+					position={[0, -5, 0]}
 					opacity={0.4}
 					scale={20}
 					blur={1.75}

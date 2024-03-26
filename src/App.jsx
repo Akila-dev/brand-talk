@@ -88,7 +88,7 @@ function App() {
 			{/* SERVICES */}
 			<div ref={section2Ref}>
 				{/* <SmoothScroll> */}
-				<div className="section-pt h-[350vh] relative top-0">
+				<div className="section-pt h-[350vh] relative top-0 bg-gray-200">
 					<div className="section-pt w-full absolute top-0">
 						<motion.div
 							variants={textVariant()}
