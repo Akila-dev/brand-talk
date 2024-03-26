@@ -318,7 +318,7 @@ h1{
 }
 
 .swiper_container {
-  height: 520px;
+  height: 440px;
   padding: 2rem 0;
   position: relative;
 }
@@ -338,7 +338,7 @@ h1{
 
 @media (max-width: 500px) {
   .swiper_container {
-    height: 460px;
+    height: 380px;
   }
   .swiper_container .swiper-slide {
     width: 250px !important;

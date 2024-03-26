@@ -162,7 +162,11 @@ const Laptop = ({ container }) => {
 		],
 		[1.57, 1.57, 0, -0.425, -0.425]
 	);
-	const rotateX = useTransform(scrollYProgress, [0, 1], [Math.cos(10) / 20, 1]);
+	const rotateX = useTransform(
+		scrollYProgress,
+		[0, 1],
+		[Math.cos(10) / 1.5, 1.3]
+	);
 	const rotateY = useTransform(scrollYProgress, [0, 1], [0, Math.sin(10) / 4]);
 	const rotateZ = useTransform(scrollYProgress, [0, 1], [0, 0.03]);
 	const positionY = useTransform(scrollYProgress, [0, 1], [-0, -5]);
@@ -181,9 +185,6 @@ const Laptop = ({ container }) => {
 						onClick={(e) => (e.stopPropagation(), setOpen(!open))}
 						scale={scale}
 					>
-						{/* <Model open={open} hinge={props.open.to([0, 1], [1.575, -0.425])} /> */}
-						{/* <Model open={open} hinge={hinge} /> */}
-
 						<Model
 							rotateX={rotateX}
 							rotateY={rotateY}
