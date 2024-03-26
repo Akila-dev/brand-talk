@@ -8,6 +8,7 @@ import {
 	OurWorks,
 	Footer,
 	PreviousWorksDetails,
+	Header,
 } from "./components";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -89,15 +90,9 @@ function App() {
 			<div ref={section2Ref}>
 				{/* <SmoothScroll> */}
 				<div className="section-pt h-[350vh] relative top-0 bg-gray-200">
-					<div className="section-pt w-full absolute top-0">
-						<motion.div
-							variants={textVariant()}
-							className="flex flex-col items-center text-center w-full overflow-hidden container"
-						>
-							<p className="section-subtext">What we do</p>
-							<motion.h1 className="section-header">Services</motion.h1>
-						</motion.div>
-					</div>
+					<motion.div className="section-pt w-full absolute top-0">
+						<Header heading="Services" subheading="What we do" />
+					</motion.div>
 
 					<div className="container h-screen w-full top-0 left-0 sticky overflow-hidden">
 						<Services container={servicesContainerRef} />

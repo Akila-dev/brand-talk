@@ -3,6 +3,7 @@ import React from "react";
 import BallCanvas from "./canvas/BallCanvas";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { LOGOS } from "../utils/constants";
+import Header from "./Header";
 
 import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -27,10 +28,7 @@ const Clients = () => {
 					// variants={slideIn("up", "tween", 0.2, 1)}
 					className="w-full containe py-5 md:py-[25px] rounded-2xl bg- text-white-100 space-y-5 md:space-y-10"
 				>
-					<div className="flex flex-col items-center text-center w-full overflow-hidden container">
-						<p className="section-subtext">our clients</p>
-						<h1 className="section-header">Clients</h1>
-					</div>
+					<Header heading="Clients" subheading="Our clients" />
 
 					<Swiper
 						grabCursor={false}

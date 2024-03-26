@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "../hoc/SectionWrapper";
-import { PreviousWorksDetails } from "../components";
+import { PreviousWorksDetails, Header } from "../components";
 import { PORTFOLIO } from "../utils/constants";
 import { textVariant } from "../utils/motion";
 
@@ -31,13 +31,7 @@ const OurWorks = () => {
 	return (
 		<div>
 			<div className="py-5 container">
-				<motion.div
-					variants={textVariant()}
-					className=" flex flex-col items-center text-center w-full"
-				>
-					<p className="section-subtext">portfolio</p>
-					<motion.h1 className="section-header">Our Works</motion.h1>
-				</motion.div>
+				<Header heading="Our Works" subheading="Portfolio" />
 
 				<div className="relative">
 					{/* <motion.div className="bg-primary w-[250px] sm:w-[300px] h-[45px] md:h-[50px] rounded-[2rem] absolute top-7 left-[50%] translate-x-[-50%]"></motion.div> */}

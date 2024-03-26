@@ -36,6 +36,10 @@ p {
     display: block;
   }
 
+*{
+  font-family: 'Montserrat';
+}
+
 h1{
   @apply font-bold
 }

@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { textVariant, slideIn, fadeIn } from "../utils/motion";
+import Header from "./Header";
 
 const WhoWeAre = () => {
 	const container = useRef();
@@ -29,8 +30,8 @@ const WhoWeAre = () => {
 					// variants={textVariant()}
 					className="flex flex-col md:items-center"
 				>
-					<p className="section-subtext">About us</p>
-					<h1 className="section-header">Who we are</h1>
+					<Header heading="Who we are" subheading="About us" />
+
 					<motion.p
 						// variants={fadeIn("", "", 0.1, 1)}
 						className="mt-4 text-[15.5px] max-w-3xl leading-[27px] text-justify md:text-center"
@@ -38,7 +39,7 @@ const WhoWeAre = () => {
 						Brandtalk Media is a boutique agency, specializing in public
 						relations, social media and marketing located in Toronto, Canada.{" "}
 						{/* <br /> */}
-						<b className="inline-bloc py-2">
+						<b className="font-bold">
 							Content is at the core of everything we create.
 						</b>{" "}
 						{/* <br /> */}
