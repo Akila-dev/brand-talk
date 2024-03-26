@@ -7,3 +7,4 @@ export { default as Footer } from "./Footer";
 export { default as WhoWeAre } from "./WhoWeAre";
 export { default as CanvasLoader } from "./Loader";
 export { default as PreviousWorksDetails } from "./PreviousWorksDetails";
+export { default as Laptop } from "./canvas/Laptop";

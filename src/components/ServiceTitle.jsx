@@ -33,7 +33,7 @@ function Title({ data, setSelectedService }) {
 	const { scrollYProgress } = useScroll({
 		target: container,
 
-		offset: ["start end", `${15 / speed}vh end`],
+		offset: ["start end", `${25 / speed}vh end`],
 	});
 
 	const clipProgress = useTransform(scrollYProgress, [0, 1], [100, 0]);

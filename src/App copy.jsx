@@ -88,22 +88,20 @@ function App() {
 			{/* SERVICES */}
 			<div ref={section2Ref}>
 				{/* <SmoothScroll> */}
-				<div className="section-pt h-[350vh] relative top-0">
-					<div className="section-pt w-full absolute top-0">
-						<motion.div
-							variants={textVariant()}
-							className="flex flex-col items-center text-center w-full overflow-hidden container"
-						>
-							<p className="section-subtext">What we do</p>
-							<motion.h1 className="section-header">Services</motion.h1>
-						</motion.div>
-					</div>
+				<div className="section-pt h-[320vh] relative top-0">
+					<motion.div
+						variants={textVariant()}
+						className="flex flex-col items-center text-center w-full overflow-hidden container"
+					>
+						<p className="section-subtext">What we do</p>
+						<motion.h1 className="section-header">Services</motion.h1>
+					</motion.div>
 
 					<div className="container h-screen w-full top-0 left-0 sticky overflow-hidden">
 						<Services container={servicesContainerRef} />
 					</div>
 
-					<div className="h-[100vh] w-full"></div>
+					<div className="h-screen w-full"></div>
 
 					<div className="h-screen w-full top-0 left-0 sticky overflow-hidden flex items-center">
 						<div className="service-container">

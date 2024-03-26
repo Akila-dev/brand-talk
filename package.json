@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-spring/core": "^9.7.3",
+    "@react-spring/three": "^9.7.3",
+    "@react-spring/web": "^9.7.3",
     "@react-three/drei": "^9.99.5",
     "@react-three/fiber": "^8.15.16",
     "@studio-freight/lenis": "^1.0.39",

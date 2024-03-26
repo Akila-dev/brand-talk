@@ -243,6 +243,6 @@ export const SERVICES = [
 			"Performance analysis and conversation tracking",
 			"Monitoring and optimization",
 		],
-		speed: 0.5,
+		speed: 0.9,
 	},
 ];

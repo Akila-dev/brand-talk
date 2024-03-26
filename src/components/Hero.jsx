@@ -60,14 +60,14 @@ const Hero1 = () => {
 	});
 	const translateLeft = useTransform(
 		scrollYProgress,
-		[0, 0.8],
+		[0, 1],
 		[0, -screenSize.width / 1.5],
 		{ ease: cubicBezier(0.17, 0.57, 0.83, 0.57) }
 		// { ease: circOut }
 	);
 	const translateRight = useTransform(
 		scrollYProgress,
-		[0, 0.8],
+		[0, 1],
 		[0, screenSize.width / 1.5],
 		{ ease: cubicBezier(0.17, 0.57, 0.83, 0.57) }
 		// { ease: circOut }

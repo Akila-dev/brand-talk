@@ -6,7 +6,6 @@ import SmoothScroll from "../hoc/SmoothScroll";
 
 import { SERVICES } from "../utils/constants";
 import Earth from "./models/Earth";
-import { Laptop } from "../components";
 
 const Services = ({ container }) => {
 	const [selectedProject, setSelectedProject] = useState(null);
@@ -14,7 +13,7 @@ const Services = ({ container }) => {
 		<div className="sticky top-0 h-screen w-full flex items-center justify-center">
 			<SmoothScroll>
 				<main className="service-main">
-					<Laptop container={container} />
+					<Earth container={container} />
 				</main>
 			</SmoothScroll>
 		</div>
