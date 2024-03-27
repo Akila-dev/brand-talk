@@ -39,7 +39,7 @@ const WhoWeAre = () => {
 						Brandtalk Media is a boutique agency, specializing in public
 						relations, social media and marketing located in Toronto, Canada.{" "}
 						{/* <br /> */}
-						<b className="font-bolden">
+						<b className="font-bold">
 							Content is at the core of everything we create.
 						</b>{" "}
 						{/* <br /> */}
