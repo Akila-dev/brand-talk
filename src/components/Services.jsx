@@ -11,12 +11,8 @@ import { Laptop } from "../components";
 const Services = ({ container }) => {
 	const [selectedProject, setSelectedProject] = useState(null);
 	return (
-		<div className="sticky top-0 h-screen w-full flex items-center justify-center">
-			<SmoothScroll>
-				<main className="service-main">
-					<Laptop container={container} />
-				</main>
-			</SmoothScroll>
+		<div className="service-main bg-red-600">
+			<Laptop container={container} />
 		</div>
 	);
 };

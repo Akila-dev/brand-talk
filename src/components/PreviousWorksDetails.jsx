@@ -91,7 +91,7 @@ const WorkDetail = ({
 									: rightTranslate
 								: leftTranslate,
 						opacity: opacity,
-						scale: opacity,
+						// scale: opacity,
 					}}
 				>
 					<Swiper
@@ -165,7 +165,7 @@ const WorkDetail = ({
 									: leftTranslate
 								: rightTranslate,
 						opacity: opacity,
-						scale: opacity,
+						// scale: opacity,
 					}}
 				>
 					<motion.div variants={textVariant()} className="flex flex-col">

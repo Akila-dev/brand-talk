@@ -255,7 +255,7 @@ h1{
 
 /* SERVICES */
 .service-main{
-  @apply h-[100vh] w-full relative flex items-center justify-center
+  @apply h-screen w-full !p-0 !m-0
 }
 
 .service-main img{

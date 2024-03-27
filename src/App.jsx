@@ -87,16 +87,18 @@ function App() {
 			</div>
 
 			{/* SERVICES */}
-			<div ref={section2Ref}>
+			<div>
 				{/* <SmoothScroll> */}
-				<div className="section-pt h-[350vh] relative top-0 bg-gray-200">
-					<motion.div className="section-pt w-full absolute top-0">
-						<Header heading="Services" subheading="What we do" />
-					</motion.div>
-
-					<div className="container h-screen w-full top-0 left-0 sticky overflow-hidden">
+				<div
+					ref={section2Ref}
+					className="h-[350vh] relative bg-gray-200 !p-0 !m-0 top-0 left-0 w-full"
+				>
+					<div className="h-screen w-full top-0 left-0 sticky overflow-hidden object-cover py-0 !m-0 bg-blue-800">
 						<Services container={servicesContainerRef} />
 					</div>
+					<motion.div className="section-pt w-full absolute top-0 ">
+						<Header heading="Services" subheading="What we do" />
+					</motion.div>
 
 					<div className="h-[100vh] w-full"></div>
 

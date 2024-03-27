@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, useGLTF, ContactShadows } from "@react-three/drei";
+import { Environment, useGLTF, ContactShadows, Sky } from "@react-three/drei";
 import { useSpring } from "@react-spring/core";
 import { a as three } from "@react-spring/three";
 import { a as web } from "@react-spring/web";
@@ -36,30 +36,6 @@ function Model({
 		() => void (document.body.style.cursor = hovered ? "pointer" : "auto"),
 		[hovered]
 	);
-	// Make it float in the air when it's opened
-	// useFrame((state) => {
-	// 	const t = state.clock.getElapsedTime();
-	// 	group.current.rotation.x = THREE.MathUtils.lerp(
-	// 		group.current.rotation.x,
-	// 		rotateX,
-	// 		0.1
-	// 	);
-	// 	group.current.rotation.y = THREE.MathUtils.lerp(
-	// 		group.current.rotation.y,
-	// 		rotateY,
-	// 		0.1
-	// 	);
-	// 	group.current.rotation.z = THREE.MathUtils.lerp(
-	// 		group.current.rotation.z,
-	// 		rotateZ,
-	// 		0.1
-	// 	);
-	// 	group.current.position.y = THREE.MathUtils.lerp(
-	// 		group.current.position.y,
-	// 		positionY,
-	// 		0.1
-	// 	);
-	// });
 
 	return (
 		<motion.group
@@ -174,9 +150,11 @@ const Laptop = ({ container }) => {
 		[0, 1],
 		[0, screenSize.width > 700 ? -4.5 : -5]
 	);
+	const sunZ = useTransform(scrollYProgress, [0, 1], [0, 10]);
+	const sunX = useTransform(scrollYProgress, [0, 1], [0, 2]);
 
 	return (
-		<div className="w-full h-screen">
+		<div className="w-full h-screen translate-y-[-24px]">
 			<Canvas dpr={[1, 2]} camera={{ position: [0, 0, -30], fov: 35 }}>
 				<three.pointLight
 					position={[10, 10, 10]}
@@ -189,6 +167,7 @@ const Laptop = ({ container }) => {
 						onClick={(e) => (e.stopPropagation(), setOpen(!open))}
 						scale={scale}
 					>
+						<spotLight position={[0, 10, -5]} intensity={500} />
 						<Model
 							rotateX={rotateX}
 							rotateY={rotateY}
@@ -197,7 +176,9 @@ const Laptop = ({ container }) => {
 							hinge={hinge}
 						/>
 					</motion.group>
-					<Environment preset="city" />
+					<ambientLight intensity={5} />
+					<Sky scale={1000} sunPosition={[0, 0.4, 0]} />
+					{/* <Environment file={environment} /> */}
 				</Suspense>
 				<ContactShadows
 					position={[0, -4.5, 0]}
@@ -212,3 +193,5 @@ const Laptop = ({ container }) => {
 };
 
 export default Laptop;
+
+useGLTF.preload("/macbook.glb");
