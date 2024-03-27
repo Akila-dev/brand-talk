@@ -172,7 +172,7 @@ const Laptop = ({ container }) => {
 	const positionY = useTransform(
 		scrollYProgress,
 		[0, 1],
-		[-0, screenSize.width > 700 ? -4.5 : -5]
+		[0, screenSize.width > 700 ? -4.5 : -5]
 	);
 
 	return (
@@ -200,9 +200,9 @@ const Laptop = ({ container }) => {
 					<Environment preset="city" />
 				</Suspense>
 				<ContactShadows
-					position={[0, -5, 0]}
+					position={[0, -4.5, 0]}
 					opacity={0.4}
-					scale={20}
+					scale={40}
 					blur={1.75}
 					far={4.5}
 				/>

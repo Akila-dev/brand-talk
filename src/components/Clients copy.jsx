@@ -1,154 +1,66 @@
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import SectionWrapper from "../hoc/SectionWrapper.jsx";
 
-import { textVariant } from "../utils/motion";
+import BallCanvas from "./canvas/BallCanvas";
+import SectionWrapper from "../hoc/SectionWrapper";
+import { LOGOS } from "../utils/constants";
+import Header from "./Header";
+
+import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import {
-	logo1,
-	logo2,
-	logo3,
-	logo4,
-	logo5,
-	logo6,
-	logo7,
-	logo8,
-	logo9,
-	logo10,
-	logo11,
-	logo12,
-} from "../assets/logos";
+	Autoplay,
+	EffectCoverflow,
+	Pagination,
+	Navigation,
+} from "swiper/modules";
 
-const Clients = ({ container }) => {
-	const { scrollYProgress } = useScroll({
-		target: container,
-		offset: ["start start", "end end"],
-	});
+const Clients = () => {
+	const swiperSlide = useSwiperSlide();
 
-	const scale4 = useTransform(scrollYProgress, [0, 1], [0, 2]);
-	const opacity1 = useTransform(scrollYProgress, [0, 1], [1, 1]);
-	const opacity01 = useTransform(scrollYProgress, [0.6, 1], [0, 1]);
-
-	const logos = [
-		{
-			src: logo1,
-			x: "80%",
-			y: "50%",
-			// w: "20px",
-			opacity: opacity1,
-		},
-		{
-			src: logo2,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-		{
-			src: logo3,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-		{
-			src: logo4,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-		{
-			src: logo5,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-		{
-			src: logo6,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-		{
-			src: logo7,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-		{
-			src: logo8,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-		{
-			src: logo9,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-		{
-			src: logo10,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-		{
-			src: logo11,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-		{
-			src: logo12,
-			x: 0,
-			y: 0,
-			// w: "20px",
-			opacity: opacity01,
-		},
-	];
 	return (
-		<div className="sticky top-0 w-full h-[100vh]">
-			<div className="absolute top-0 h-full w-full">
-				<div className="relative container h-screen section-py">
-					<motion.div
-						variants={textVariant()}
-						className="flex flex-col items-center text-center w-full"
-					>
-						<p className="section-subtext">Our Clients</p>
-						<motion.h1 className="section-header">Clients</motion.h1>
-					</motion.div>
+		<div className="container section-py-min">
+			<div className="green-orange-gradien p-[1px] rounded-2xl">
+				<div
+					// variants={slideIn("up", "tween", 0.2, 1)}
+					className="w-full containe py-5 md:py-[25px] rounded-2xl bg- text-white-100 space-y-5 md:space-y-10"
+				>
+					<Header heading="Clients" subheading="Our clients" />
 
-					<div className="h-full w-full ">
-						<div className="w-full h-full relative">
-							{logos.map(({ src, x, y, opacity }, index) => (
-								<motion.div
-									className="absolute top-[50%] left-[50%]"
-									key={index}
-									style={{
-										// opacity,
-										// scale: opacity,
-										translateX: "-50%",
-										translateY: "-50%",
-									}}
-								>
-									<img
-										src={src}
-										alt={"client " + index}
-										className="object-cover"
-									/>
-								</motion.div>
-							))}
-						</div>
-					</div>
+					<Swiper
+						grabCursor={false}
+						centeredSlides={false}
+						loop={true}
+						slidesPerView={"auto"}
+						autoplay={{
+							delay: 2500,
+							disableOnInteraction: false,
+						}}
+						modules={[Autoplay]}
+						className="logo-swiper-container"
+					>
+						{LOGOS.map((logo, index) => (
+							<SwiperSlide key={index}>
+								<div className="w-full h-full px-3" key={index}>
+									{/* <BallCanvas icon={logo} /> */}
+									<img src={logo} className="object-contain w-full h-full" />
+								</div>
+							</SwiperSlide>
+						))}
+
+						{/* <div className="slider-controler flex justify-center items-center">
+						<button className="swiper-button-prev slider-arrow shadow-card">
+							<IoArrowBackOutline className="bg-white shadow-card p-[10px] rounded-full" />
+						</button>
+						<div className="swiper-pagination"></div>
+						<button className="swiper-button-next slider-arrow shadow-card">
+							<IoArrowForward className="bg-white shadow-card p-[10px] rounded-full" />
+						</button>
+					</div> */}
+					</Swiper>
 				</div>
 			</div>
 		</div>

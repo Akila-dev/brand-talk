@@ -14,7 +14,7 @@ const WhoWeAre = () => {
 	const container = useRef();
 	const { scrollYProgress } = useScroll({
 		target: container,
-		offset: ["start start", "end end"],
+		offset: ["start end", "end start"],
 	});
 	return (
 		<div
@@ -30,7 +30,7 @@ const WhoWeAre = () => {
 					// variants={textVariant()}
 					className="flex flex-col md:items-center"
 				>
-					<Header heading="Who we are" subheading="About us" />
+					<Header heading="Who we are" subheading="About us" side={true} />
 
 					<motion.p
 						// variants={fadeIn("", "", 0.1, 1)}

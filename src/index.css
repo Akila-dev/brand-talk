@@ -38,10 +38,12 @@ p {
 
 *{
   font-family: 'Montserrat';
+  font-weight: 500;
 }
 
 h1{
-  @apply font-bold
+  font-family: 'Montserrat';
+  font-weight: bold;
 }
 
 /* p{
@@ -95,11 +97,11 @@ h1{
 }
 
 .section-py{
-    @apply py-[70px] lg:py-[80px]
+    @apply py-[50px] lg:py-[80px]
 }
 
 .section-pt{
-  @apply pt-[70px] lg:pt-[80px]
+  @apply pt-[50px] lg:pt-[80px]
 }
 .section-py-min{
   @apply py-[30px] lg:py-[50px]
@@ -493,6 +495,7 @@ h1{
   position: relative;
   width: 15rem !important;
   bottom: 10px;
+  overflow: hidden;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -501,4 +504,26 @@ h1{
 
 .swiper-pagination .swiper-pagination-bullet-active {
   background: #429A7D;
+}
+
+
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #f5f5f5;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #b8bed9;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #c7c7cd;
+}
+
+.scrollbar-fix {
+  @apply custom-scrollbar;
 }

@@ -30,7 +30,7 @@ const OurWorks = () => {
 	const [companyNameSlider, setCompanyNameSlider] = useState();
 	return (
 		<div>
-			<div className="py-5 container">
+			<div className="pt-5 container">
 				<Header heading="Our Works" subheading="Portfolio" />
 
 				<div className="relative">
@@ -56,6 +56,21 @@ const OurWorks = () => {
 								</a>
 							</SwiperSlide>
 						))}
+						{/* {PORTFOLIO.map((data, index) => (
+							<SwiperSlide key={index} className="p-0 m-0 h-auto">
+								<a href={"#portfolio" + index}>
+									<div className="flex items-center justify-center">
+										<div
+											className={`p-4 text-xs lg:text-sm w-full max-w-[350px]`}
+										>
+											<h2 className="w-full text-gray-100 text-center">
+												{data.company}
+											</h2>
+										</div>
+									</div>
+								</a>
+							</SwiperSlide>
+						))} */}
 					</Swiper>
 
 					<Swiper
@@ -95,20 +110,6 @@ const OurWorks = () => {
 							<SwiperSlide key={index}>
 								{({ isActive }) => (
 									<a href={"#portfolio" + index}>
-										{/* <motion.div className="mb-10 flex items-center justify-center">
-											<div
-												className={` ${
-													isActive
-														? "rounded-[2rem] text-white"
-														: "text-primary"
-												}  p-3 text-xs lg:text-sm w-full max-w-[350px]`}
-											>
-												<h2 className="w-full text-gray-100 text-center">
-													{data.company}
-												</h2>
-											</div>
-										</motion.div> */}
-
 										<img
 											src={data.images[0] || p11}
 											alt="slide_image"
@@ -118,12 +119,25 @@ const OurWorks = () => {
 								)}
 							</SwiperSlide>
 						))}
+						{/* {PORTFOLIO.map((data, index) => (
+							<SwiperSlide key={index}>
+								{({ isActive }) => (
+									<a href={"#portfolio" + index}>
+										<img
+											src={data.images[0] || p11}
+											alt="slide_image"
+											className="shadow-card"
+										/>
+									</a>
+								)}
+							</SwiperSlide>
+						))} */}
 
 						<div className="slider-controler flex justify-center items-center">
+							<div className="swiper-pagination"></div>
 							<button className="swiper-button-prev slider-arrow shadow-card">
 								<IoArrowBackOutline className="bg-white shadow-card p-[10px] rounded-full text-brand" />
 							</button>
-							<div className="swiper-pagination"></div>
 							<button className="swiper-button-next slider-arrow shadow-card">
 								<IoArrowForward className="bg-white shadow-card p-[10px] rounded-full text-brand" />
 							</button>
