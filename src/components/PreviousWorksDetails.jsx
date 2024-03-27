@@ -56,22 +56,28 @@ const WorkDetail = ({
 	const container = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: container,
-		offset: ["start end", "end end"],
+		offset: ["start end", "end start"],
 	});
 
 	const leftTranslate = useTransform(
 		scrollYProgress,
-		[0, 0.5],
+		[0, 0.3],
 		[screenSize.width > 700 ? -200 : -50, 0],
 		{ ease: circOut }
 	);
 	const rightTranslate = useTransform(
 		scrollYProgress,
-		[0, 0.5],
+		[0, 0.7],
 		[screenSize.width > 700 ? 200 : 50, 0],
 		{ ease: circOut }
 	);
 	const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1], {
+		ease: circOut,
+	});
+	const rotateYL = useTransform(scrollYProgress, [0, 0.5], [50, 0], {
+		ease: circOut,
+	});
+	const rotateYR = useTransform(scrollYProgress, [0, 0.5], [-50, 0], {
 		ease: circOut,
 	});
 
@@ -91,6 +97,12 @@ const WorkDetail = ({
 									: rightTranslate
 								: leftTranslate,
 						opacity: opacity,
+						rotateY:
+							screenSize.width > 700
+								? index % 2
+									? rotateYL
+									: rotateYR
+								: rotateYL,
 						// scale: opacity,
 					}}
 				>
@@ -165,6 +177,12 @@ const WorkDetail = ({
 									: leftTranslate
 								: rightTranslate,
 						opacity: opacity,
+						rotateY:
+							screenSize.width > 700
+								? index % 2
+									? rotateYR
+									: rotateYL
+								: rotateYR,
 						// scale: opacity,
 					}}
 				>
