@@ -31,7 +31,7 @@ const Clients = () => {
 	let [ref, { width }] = useMeasure();
 	const container = useRef();
 
-	// const xTranslation = useMotionValue(0);
+	const containerTranslation = useMotionValue(0);
 
 	const { scrollYProgress } = useScroll({
 		target: container,
@@ -41,26 +41,24 @@ const Clients = () => {
 	const xTranslation = useTransform(
 		scrollYProgress,
 		[0, 1],
-		[0, -width / 4 - 8]
+		[-width / 4 - 8, 0]
 	);
 	// console.log(scrollYProgress);
 
-	// useEffect(() => {
-	// 	let controls;
-	// 	let finalPosition = -width / 2 - 8;
+	useEffect(() => {
+		let controls;
+		let finalPosition = -width / 2 - 8;
 
-	// 	controls = useTransform((scrollYProgress, [0, 1], [0, finalPosition]));
+		controls = animate(containerTranslation, [0, finalPosition], {
+			ease: "linear",
+			duration: 25,
+			repeat: Infinity,
+			repeatType: "loop",
+			repeatDelay: 0,
+		});
 
-	// 	// controls = animate(xTranslation, [0, finalPosition], {
-	// 	// 	ease: "linear",
-	// 	// 	duration: 25,
-	// 	// 	repeat: Infinity,
-	// 	// 	repeatType: "loop",
-	// 	// 	repeatDelay: 0,
-	// 	// });
-
-	// 	return controls.stop;
-	// }, [xTranslation, width, scrollYProgress]);
+		return controls.stop;
+	}, [containerTranslation, width]);
 
 	return (
 		<div className="container section-py-min relative">
@@ -69,9 +67,12 @@ const Clients = () => {
 				<div className="w-full py-5 md:py-[25px] rounded-2xl bg- text-white-100 space-y-5 md:space-y-10">
 					<Header heading="Clients" subheading="Our clients" />
 
-					<div className="w-full relative">
+					<motion.div
+						ref={ref}
+						style={{ x: containerTranslation }}
+						className="w-full relative"
+					>
 						<motion.div
-							ref={ref}
 							style={{ translateX: xTranslation }}
 							className="flex gap-2 pointer-events-none absolute top-0 left-0"
 						>
@@ -88,7 +89,7 @@ const Clients = () => {
 								</motion.div>
 							))}
 						</motion.div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</div>

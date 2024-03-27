@@ -60,7 +60,7 @@ function Title({ data, setSelectedService }) {
 						{title}
 					</motion.p>
 
-					<p className="text-shadow w-full" style={{ scale }}>
+					<p className="text-shadow w-full text-shadow" style={{ scale }}>
 						{title}
 					</p>
 				</button>
