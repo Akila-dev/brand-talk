@@ -11,7 +11,7 @@ import { Laptop } from "../components";
 const Services = ({ container }) => {
 	const [selectedProject, setSelectedProject] = useState(null);
 	return (
-		<div className="service-main bg-red-600">
+		<div className="service-main">
 			<Laptop container={container} />
 		</div>
 	);
