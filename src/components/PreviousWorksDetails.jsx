@@ -62,35 +62,36 @@ const WorkDetail = ({
 	const leftTranslate = useTransform(
 		scrollYProgress,
 		[0, 0.5],
-		[-screenSize.with > 700 ? -200 : -10, 0]
+		[screenSize.width > 700 ? -200 : -50, 0],
+		{ ease: circOut }
 	);
 	const rightTranslate = useTransform(
 		scrollYProgress,
-		[0, screenSize.with > 700 ? 0.5 : 0.4],
-		[screenSize.with > 700 ? 200 : 10, 0]
+		[0, 0.5],
+		[screenSize.width > 700 ? 200 : 50, 0],
+		{ ease: circOut }
 	);
-	const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+	const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1], {
+		ease: circOut,
+	});
 
 	return (
 		<div ref={container} id={`portfolio${index}`} className="container">
-			{/* Hello */}
 			<div
 				className={`gap-5 md:gap-[50px] lg:gap-[70px] overflow-hidde grid grid-cols-1 lg:grid-cols-2`}
 			>
 				<motion.div
-					// variants={slideIn("right", "tween", 0.2, 1)}
-					// initial={{ x: 200 }}
-					// whileInView={{ x: 0 }}
-					// transition={{ type: "spring", stiffness: 100 }}
+					layout
 					className={`${index % 2 ? "lg:order-1" : "lg:order-2"} col-span-1`}
 					style={{
 						x:
-							screenSize.with > 700
+							screenSize.width > 700
 								? index % 2
 									? leftTranslate
 									: rightTranslate
 								: leftTranslate,
 						opacity: opacity,
+						scale: opacity,
 					}}
 				>
 					<Swiper
@@ -152,21 +153,19 @@ const WorkDetail = ({
 				</motion.div>
 
 				<motion.div
-					// variants={slideIn("top", "tween", 0.2, 1)}
-					// initial={{ screenSize.with > 700 ? -200 }}
-					// whileInView={{ x: 0 }}
-					// transition={{ type: "spring", stiffness: 100 }}
+					layout
 					className={`${
 						index % 2 ? "lg:order-2" : "lg:order-1"
 					} col-span-1 flex items-center`}
 					style={{
 						x:
-							screenSize.with > 700
+							screenSize.width > 700
 								? index % 2
 									? rightTranslate
 									: leftTranslate
 								: rightTranslate,
 						opacity: opacity,
+						scale: opacity,
 					}}
 				>
 					<motion.div variants={textVariant()} className="flex flex-col">

@@ -9,7 +9,7 @@ const SectionWrapper = (Component, idName) =>
 				variants={staggerContainer()}
 				initial="hidden"
 				whileInView="show"
-				viewport={{ once: false, amount: 0.35 }}
+				viewport={{ once: false, amount: 0.25 }}
 				className={`overflow-hidden relative z-0`}
 			>
 				<span className="hash-span" id={idName}>
