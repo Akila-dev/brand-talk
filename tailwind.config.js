@@ -23,7 +23,7 @@ export default {
 			// 	"hero-pattern": "url('/src/assets/herobg.png')",
 			// },
 			fontFamily: {
-				bold: "MontserratBold",
+				bolden: "MontserratBold",
 				regular: "MontserratRegular",
 				medium: "MontserratMedium",
 				light: "MontserratLight",

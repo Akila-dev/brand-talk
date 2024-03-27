@@ -126,7 +126,7 @@ const Hero1 = () => {
 						className="absolute bottom-0 w-full h-full flex items-center justify-center"
 					>
 						<div className="container text-center flex flex-col items-center gap-5">
-							<h1 className="text-[10vw] md:text-[8vw] leading-[115%] lg:text-6xl font-bold max-w-[900px] mx-auto text-center text-white uppercase drop-shadow-2xl px-3">
+							<h1 className="text-[10vw] md:text-[8vw] leading-[115%] lg:text-6xl font-bolden max-w-[900px] mx-auto text-center text-white uppercase drop-shadow-2xl px-3">
 								Cultivating the art of story telling to build brands
 							</h1>
 							<a

@@ -131,7 +131,7 @@ const WorkDetail = ({
 								</p>
 							</div>
 						)}
-						{subheading && <h3 className="pt-3 font-bold">{subheading}</h3>}
+						{subheading && <h3 className="pt-3 font-bolden">{subheading}</h3>}
 						{results && (
 							<ul className="flex flex-col gap-1 pt-3">
 								{results.map(({ title, value }, index) => (
