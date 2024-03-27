@@ -108,13 +108,13 @@ const Laptop = ({ container }) => {
 
 	const { scrollYProgress } = useScroll({
 		target: container,
-		offset: ["start end", "end start"],
+		offset: ["start end", "end end"],
 	});
 
 	const rotate = useTransform(
 		scrollYProgress,
-		[0, screenSize.width > 700 ? 0.5 : 0.37, 1],
-		[Math.PI, -Math.PI, Math.PI * 2]
+		[0, 0.35, screenSize.width > 700 ? 0.5 : 0.5],
+		[1, -1, -3]
 	);
 	const scale = useTransform(
 		scrollYProgress,

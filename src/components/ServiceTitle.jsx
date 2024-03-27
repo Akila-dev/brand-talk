@@ -38,6 +38,7 @@ function Title({ data, setSelectedService }) {
 
 	const clipProgress = useTransform(scrollYProgress, [0, 1], [100, 0]);
 	const scale = useTransform(scrollYProgress, [0, 1], [1, 1]);
+	const y = useTransform(scrollYProgress, [0, 1], [200, 0]);
 
 	const clip = useMotionTemplate`inset(0 ${clipProgress}% 0 0)`;
 

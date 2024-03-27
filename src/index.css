@@ -253,6 +253,10 @@ h1{
   }
 }
 
+body{
+  @apply scroll-smooth
+}
+
 /* SERVICES */
 .service-main{
   @apply h-screen w-full !p-0 !m-0
