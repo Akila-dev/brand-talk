@@ -47,13 +47,13 @@ p {
   }
 
 *{
-  font-family: 'Montserrat';
-  font-weight: 500;
+  font-family: 'Montserrat' !important;
+  /* font-weight: 500; */
 }
 
 h1{
-  font-family: 'Montserrat';
-  font-weight: bold;
+  font-family: 'Montserrat' !important;
+  /* font-weight: bold; */
 }
 
 /* p{
