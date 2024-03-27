@@ -1,5 +1,11 @@
-import { useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
+import {
+	motion,
+	useScroll,
+	useTransform,
+	cubicBezier,
+	circOut,
+} from "framer-motion";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { textVariant, slideIn, fadeIn } from "../utils/motion";
 import { PORTFOLIO } from "../utils/constants";
@@ -15,6 +21,14 @@ import "swiper/css/thumbs";
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
+const getWindowsDimension = () => {
+	const { innerWidth: width, innerHeight: height } = window;
+	return {
+		width,
+		height,
+	};
+};
+
 const WorkDetail = ({
 	company,
 	content,
@@ -28,8 +42,37 @@ const WorkDetail = ({
 }) => {
 	const [thumbsSwiper, setThumbsSwiper] = useState();
 
+	const [screenSize, setScreenSize] = useState(getWindowsDimension());
+	useEffect(() => {
+		const handleResize = () => {
+			setScreenSize(getWindowsDimension());
+		};
+
+		window.addEventListener("resize", handleResize);
+
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
+	const container = useRef(null);
+	const { scrollYProgress } = useScroll({
+		target: container,
+		offset: ["start end", "end end"],
+	});
+
+	const leftTranslate = useTransform(
+		scrollYProgress,
+		[0, 0.5],
+		[-screenSize.with > 700 ? -200 : -10, 0]
+	);
+	const rightTranslate = useTransform(
+		scrollYProgress,
+		[0, screenSize.with > 700 ? 0.5 : 0.4],
+		[screenSize.with > 700 ? 200 : 10, 0]
+	);
+	const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+
 	return (
-		<div id={`portfolio${index}`} className="container">
+		<div ref={container} id={`portfolio${index}`} className="container">
 			{/* Hello */}
 			<div
 				className={`gap-5 md:gap-[50px] lg:gap-[70px] overflow-hidde grid grid-cols-1 lg:grid-cols-2`}
@@ -40,6 +83,15 @@ const WorkDetail = ({
 					// whileInView={{ x: 0 }}
 					// transition={{ type: "spring", stiffness: 100 }}
 					className={`${index % 2 ? "lg:order-1" : "lg:order-2"} col-span-1`}
+					style={{
+						x:
+							screenSize.with > 700
+								? index % 2
+									? leftTranslate
+									: rightTranslate
+								: leftTranslate,
+						opacity: opacity,
+					}}
 				>
 					<Swiper
 						style={{
@@ -101,12 +153,21 @@ const WorkDetail = ({
 
 				<motion.div
 					// variants={slideIn("top", "tween", 0.2, 1)}
-					// initial={{ x: -200 }}
+					// initial={{ screenSize.with > 700 ? -200 }}
 					// whileInView={{ x: 0 }}
 					// transition={{ type: "spring", stiffness: 100 }}
 					className={`${
 						index % 2 ? "lg:order-2" : "lg:order-1"
 					} col-span-1 flex items-center`}
+					style={{
+						x:
+							screenSize.with > 700
+								? index % 2
+									? rightTranslate
+									: leftTranslate
+								: rightTranslate,
+						opacity: opacity,
+					}}
 				>
 					<motion.div variants={textVariant()} className="flex flex-col">
 						<p className="section-subtext">our works</p>

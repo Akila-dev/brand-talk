@@ -155,9 +155,9 @@ const Laptop = ({ container }) => {
 		scrollYProgress,
 		[
 			0,
-			screenSize.width > 700 ? 0.35 : 0.45,
-			screenSize.width > 700 ? 0.4 : 0.5,
-			screenSize.width > 700 ? 0.45 : 0.55,
+			screenSize.width > 700 ? 0.35 : 0.25,
+			screenSize.width > 700 ? 0.4 : 0.3,
+			screenSize.width > 700 ? 0.45 : 0.35,
 			1,
 		],
 		[1.57, 1.57, 0, -0.425, -0.425]
